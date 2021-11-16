@@ -25,49 +25,24 @@ public class HexGrid : MonoBehaviour
         //         tiles[i] = i % 2 == 0 ? tileA : tileB;
         //     }
         // }
-        
-        var positions = new Vector3Int[radius];
-        var tiles = new TileBase[radius];
-        
-        for (var i = 0; i < radius; ++i)
-        {
-                positions[i] = i == 0 ? Vector3Int.zero : GridOffset.BottomRight(positions[i - 1]);
-                tiles[i] = dirtTile;
-        }
-        
-        groundMap.SetTiles(positions, tiles);
-        
-        for (var i = 0; i < radius; ++i)
-        {
-            positions[i] = i == 0 ? Vector3Int.zero : GridOffset.Right(positions[i - 1]);
-        }
-        
-        groundMap.SetTiles(positions, tiles);
+
+        GenerateStraightLine(Vector3Int.zero, dirtTile, radius, GridOffset.Neighbour.TopRight);
+        GenerateStraightLine(Vector3Int.zero, dirtTile, radius, GridOffset.Neighbour.Right);
+        GenerateStraightLine(Vector3Int.zero, dirtTile, radius, GridOffset.Neighbour.BottomRight);
+        GenerateStraightLine(Vector3Int.zero, dirtTile, radius, GridOffset.Neighbour.BottomLeft);
+        GenerateStraightLine(Vector3Int.zero, dirtTile, radius, GridOffset.Neighbour.Left);
+        GenerateStraightLine(Vector3Int.zero, dirtTile, radius, GridOffset.Neighbour.TopLeft);
+    }
+
+    private void GenerateStraightLine(Vector3Int startCord, TileBase tile, int length, GridOffset.Neighbour direction)
+    {
+        var positions = new Vector3Int[length];
+        var tiles = new TileBase[length];
         
         for (var i = 0; i < radius; ++i)
         {
-            positions[i] = i == 0 ? Vector3Int.zero : GridOffset.TopRight(positions[i - 1]);
-        }
-        
-        groundMap.SetTiles(positions, tiles);
-        
-        for (var i = 0; i < radius; ++i)
-        {
-            positions[i] = i == 0 ? Vector3Int.zero : GridOffset.Left(positions[i - 1]);
-        }
-        
-        groundMap.SetTiles(positions, tiles);
-        
-        for (var i = 0; i < radius; ++i)
-        {
-            positions[i] = i == 0 ? Vector3Int.zero : GridOffset.BottomLeft(positions[i - 1]);
-        }
-        
-        groundMap.SetTiles(positions, tiles);
-        
-        for (var i = 0; i < radius; ++i)
-        {
-            positions[i] = i == 0 ? Vector3Int.zero : GridOffset.TopLeft(positions[i - 1]);
+            positions[i] = i == 0 ? startCord : GridOffset.GetNeighbourCoord(positions[i - 1], direction);
+            tiles[i] = tile;
         }
         
         groundMap.SetTiles(positions, tiles);
