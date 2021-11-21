@@ -23,10 +23,11 @@ namespace Source
 #endif
             _systems
                 .Add(new WorldGenerator())
-                //.Add(new TestGenerator())
+                .Add(new TestGenerator())
 
                 .Inject(GetComponent<ISceneContext>())
-                .Inject((IConfig)_config)
+                .Inject(_config)
+                .Inject(new RandomService())
                 
                 .Init();
         }

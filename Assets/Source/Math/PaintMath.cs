@@ -5,13 +5,14 @@ namespace Source
 {
     public static class PaintMath
     {
-        public static Vector3Int[] GenerateStraightLine(Vector3Int startCord, int length, GridMath.Neighbour direction)
+        public static Vector3Int[] GenerateStraightLine(Vector3Int startCord, int length, GridMath.Direction direction)
         {
             var positions = new Vector3Int[length];
             
             for (var i = 0; i < length; ++i)
             {
-                positions[i] = i == 0 ? startCord : GridMath.GetNeighbourCoord(positions[i - 1], direction);
+                positions[i] = startCord;
+                startCord.Move(direction);
             }
             
             return positions;
@@ -21,16 +22,15 @@ namespace Source
         {
             var positions = new Vector3Int[radius * 6];
 
-            var currentPoint = centerCoord;
             for (var i = 0; i < radius; ++i)
-                currentPoint = GridMath.GetNeighbourCoord(currentPoint, GridMath.Neighbour.Left);
+                centerCoord.Move(GridMath.Direction.Left);
 
             var n = 0;
-            for (GridMath.Neighbour d = 0; d < (GridMath.Neighbour) 6; ++d)
+            for (GridMath.Direction d = 0; d < (GridMath.Direction) 6; ++d)
                 for (var i = 0; i < radius; ++i, ++n)
                 {
-                    positions[n] = currentPoint;
-                    currentPoint = GridMath.GetNeighbourCoord(currentPoint, d);
+                    positions[n] = centerCoord;
+                    centerCoord.Move(d);
                 }
 
             return positions;
@@ -42,17 +42,16 @@ namespace Source
             var positions = new Vector3Int[area];
 
             if (radius > 0) positions[0] = centerCoord;
-            
-            var currentPoint = centerCoord;
+
             var n = 1;
             for (var r = 1; r <= radius; ++r)
             {
-                currentPoint = GridMath.GetNeighbourCoord(currentPoint, GridMath.Neighbour.Left);
-                for (GridMath.Neighbour d = 0; d < (GridMath.Neighbour) 6; ++d)
+                centerCoord.Move(GridMath.Direction.Left);
+                for (GridMath.Direction d = 0; d < (GridMath.Direction) 6; ++d)
                     for (var i = 0; i < r; ++i, ++n)
                     {
-                        positions[n] = currentPoint;
-                        currentPoint = GridMath.GetNeighbourCoord(currentPoint, d);
+                        positions[n] = centerCoord;
+                        centerCoord.Move(d);
                     }
             }
 
@@ -67,6 +66,11 @@ namespace Source
                 tiles[i] = tileBase;
             
             map.SetTiles(positions, tiles);
+        }
+
+        public static void Put(Tilemap map, Vector3Int position, TileBase tileBase)
+        {
+            map.SetTile(position, tileBase);
         }
     }
 }

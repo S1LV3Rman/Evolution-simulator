@@ -9,5 +9,7 @@ namespace Source
         public TileBase GrassTile { get; }
         public TileBase DirtTile { get; }
         
+        
+        public int[] TestVariables { get; }
     }
 }

@@ -3,17 +3,13 @@ using UnityEngine;
 
 namespace Source
 {
-    public static class GridMath
+    public static partial class GridMath
     {
-        private static Vector3Int BottomRight(Vector3Int pos) => new Vector3Int(pos.y % 2 == 0 ? pos.x : pos.x + 1, pos.y - 1, 0);
-        private static Vector3Int Right(Vector3Int pos) =>       new Vector3Int(pos.x + 1, pos.y, 0);
-        private static Vector3Int TopRight(Vector3Int pos) =>    new Vector3Int(pos.y % 2 == 0 ? pos.x : pos.x + 1, pos.y + 1, 0);
-        private static Vector3Int BottomLeft(Vector3Int pos) =>  new Vector3Int(pos.y % 2 == 0 ? pos.x - 1 : pos.x, pos.y - 1, 0);
-        private static Vector3Int Left(Vector3Int pos) =>        new Vector3Int(pos.x - 1, pos.y, 0);
-        private static Vector3Int TopLeft(Vector3Int pos) =>     new Vector3Int(pos.y % 2 == 0 ? pos.x - 1 : pos.x, pos.y + 1, 0);
+        private static int even(this int value) => value % 2 == 0 ? 1 : 0;
+        private static int  odd(this int value) => value % 2 == 0 ? 0 : 1;
     
 
-        public enum Neighbour
+        public enum Direction
         {
             TopRight    = 0,
             Right       = 1,
@@ -22,19 +18,83 @@ namespace Source
             Left        = 4,
             TopLeft     = 5,
         }
-
-        public static Vector3Int GetNeighbourCoord(Vector3Int coord, Neighbour neighbour)
+        
+        public static void Move(ref this Vector3Int pos, Direction direction)
         {
-            return neighbour switch
+            switch (direction)
             {
-                Neighbour.TopRight => TopRight(coord),
-                Neighbour.Right => Right(coord),
-                Neighbour.BottomRight => BottomRight(coord),
-                Neighbour.BottomLeft => BottomLeft(coord),
-                Neighbour.Left => Left(coord),
-                Neighbour.TopLeft => TopLeft(coord),
-                _ => throw new ArgumentOutOfRangeException(nameof(neighbour), neighbour, null)
+                case Direction.TopRight:    pos.MoveTopRight();    break;
+                case Direction.Right:       pos.MoveRight();       break;
+                case Direction.BottomRight: pos.MoveBottomRight(); break;
+                case Direction.BottomLeft:  pos.MoveBottomLeft();  break;
+                case Direction.Left:        pos.MoveLeft();        break;
+                case Direction.TopLeft:     pos.MoveTopLeft();     break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+            }
+        }
+        
+        public static void Move(ref this Vector3Int pos, Direction direction, int distance)
+        {
+            if (distance == 0) return;
+
+            var reverse = distance < 0;
+
+            switch (direction)
+            {
+                case Direction.TopRight:
+                    if (reverse) pos.MoveBottomLeft(distance);
+                    else pos.MoveTopRight(distance);
+                    break;
+                case Direction.Right:
+                    if (reverse) pos.MoveLeft(distance);
+                    else pos.MoveRight(distance);
+                    break;
+                case Direction.BottomRight:
+                    if (reverse) pos.MoveTopLeft(distance);
+                    else pos.MoveBottomRight(distance);
+                    break;
+                case Direction.BottomLeft:
+                    if (reverse)  pos.MoveTopRight(distance);
+                    else pos.MoveBottomLeft(distance);
+                    break;
+                case Direction.Left:
+                    if (reverse) pos.MoveRight(distance);
+                    else pos.MoveLeft(distance);
+                    break;
+                case Direction.TopLeft:
+                    if (reverse) pos.MoveBottomRight(distance);
+                    else pos.MoveTopLeft(distance);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+            }
+        }
+
+        public static Vector3Int GetNeighbourCoord(Vector3Int coord, Direction direction)
+        {
+            return direction switch
+            {
+                Direction.TopRight => TopRight(coord),
+                Direction.Right => Right(coord),
+                Direction.BottomRight => BottomRight(coord),
+                Direction.BottomLeft => BottomLeft(coord),
+                Direction.Left => Left(coord),
+                Direction.TopLeft => TopLeft(coord),
+                _ => throw new ArgumentOutOfRangeException(nameof(direction), direction, null)
             };
+        }
+
+        public static Vector3Int GetPos(MapCoord globalCoord)
+        {
+            return GetPos(Vector3Int.zero, globalCoord);
+        }
+
+        public static Vector3Int GetPos(Vector3Int relativePos, MapCoord localCoord)
+        {
+            return localCoord.Top == localCoord.Bot ? 
+                Right(relativePos, localCoord.Bot) : 
+                TopRight(BottomRight(relativePos, localCoord.Bot), localCoord.Top);
         }
     }
 }
