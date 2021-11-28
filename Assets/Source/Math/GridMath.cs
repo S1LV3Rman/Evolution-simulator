@@ -87,14 +87,19 @@ namespace Source
 
         public static Vector3Int GetPos(MapCoord globalCoord)
         {
-            return GetPos(Vector3Int.zero, globalCoord);
+            return GetPos(Vector3Int.zero, globalCoord.Top, globalCoord.Bot);
+        }
+
+        public static Vector3Int GetPos(Vector3Int relativePos, int top, int bot)
+        {
+            return top == bot ? 
+                Right(relativePos, bot) : 
+                TopRight(BottomRight(relativePos, bot), top);
         }
 
         public static Vector3Int GetPos(Vector3Int relativePos, MapCoord localCoord)
         {
-            return localCoord.Top == localCoord.Bot ? 
-                Right(relativePos, localCoord.Bot) : 
-                TopRight(BottomRight(relativePos, localCoord.Bot), localCoord.Top);
+            return GetPos(relativePos, localCoord.Top, localCoord.Bot);
         }
     }
 }

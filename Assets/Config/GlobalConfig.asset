@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3974bf555c6dc074e8a31ea748074fa4, type: 3}
   m_Name: GlobalConfig
   m_EditorClassIdentifier: 
-  _worldRadius: 20
+  _defaultFrameTime: 1
+  _worldTimeSpeed: 1
+  _worldRadius: 10
   _grassTile: {fileID: 11400000, guid: ae14badd7c360c542b11ddec2739e8fd, type: 2}
   _dirtTile: {fileID: 11400000, guid: 5888abb116ec7b6498336eb1e13ac4f9, type: 2}
+  _lifeTile: {fileID: 11400000, guid: c3d8b40928af5984fba59067b212a875, type: 2}
+  _testVariables: 0a00000003000000

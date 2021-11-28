@@ -13,7 +13,7 @@ namespace Source
         
         public int Range(int min, int max)
         {
-            return _rng.Next(min, max);
+            return _rng.Next(min, max + 1);
         }
 
         public float Range(float min, float max)

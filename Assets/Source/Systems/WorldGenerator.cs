@@ -15,8 +15,7 @@ namespace Source.Systems
             var radius = _config.WorldRadius;
             var map = _scene.GroundMap;
             
-            var pattern = PaintMath.GenerateFullCircle(Vector3Int.zero, radius);
-            PaintMath.Fill(map, pattern, grassTile);
+            PaintMath.FullCircle(map, grassTile, Vector3Int.zero, radius);
         }
     }
 }

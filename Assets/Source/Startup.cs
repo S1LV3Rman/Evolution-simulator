@@ -23,7 +23,14 @@ namespace Source
 #endif
             _systems
                 .Add(new WorldGenerator())
-                .Add(new TestGenerator())
+                .Add(new LifeGenerator())
+                
+                .Add(new WorldTime())
+                
+                .Add(new LifeViewCreator())
+                .Add(new LifeViewMover())
+                
+                .Add(new TestSystem())
 
                 .Inject(GetComponent<ISceneContext>())
                 .Inject(_config)

@@ -1,4 +1,7 @@
-﻿namespace Source
+﻿using System;
+using UnityEngine;
+
+namespace Source
 {
     public struct MapCoord
     {
@@ -10,8 +13,22 @@
             Top = top;
             Bot = bot;
         }
-        
 
+
+        public void Move(GridMath.Direction direction, int distance = 1)
+        {
+            switch (direction)
+            {
+                case GridMath.Direction.TopRight: MoveTopRight(distance); break;
+                case GridMath.Direction.Right: MoveRight(distance); break;
+                case GridMath.Direction.BottomRight: MoveBottomRight(distance); break;
+                case GridMath.Direction.BottomLeft: MoveBottomLeft(distance); break;
+                case GridMath.Direction.Left: MoveLeft(distance); break;
+                case GridMath.Direction.TopLeft: MoveTopLeft(distance); break;
+                default: throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+            }
+        }
+        
         public void MoveTopRight(int distance = 1)
         {
             Top += distance;
