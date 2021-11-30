@@ -27,10 +27,12 @@ namespace Source
                 
                 .Add(new WorldTime())
                 
+                .Add(new LifeMotion())
+                
                 .Add(new LifeViewCreator())
                 .Add(new LifeViewMover())
                 
-                .Add(new TestSystem())
+                //.Add(new TestSystem())
 
                 .Inject(GetComponent<ISceneContext>())
                 .Inject(_config)

@@ -14,13 +14,10 @@ namespace Source.Systems
         
         public void Init()
         {
-            _radius = _config.WorldRadius;
+            _radius = _config.WorldSize;
             
-            CreateCell();
-            CreateCell();
-            CreateCell();
-            CreateCell();
-            CreateCell();
+            for(var i = 0; i < _config.TestVariables[1]; ++i)
+                CreateCell();
         }
         
         public void Run()
@@ -35,7 +32,7 @@ namespace Source.Systems
                 _random.Range(-_radius + top, _radius) : 
                 _random.Range(-_radius, _radius + top);
 
-            var coord = new MapCoord(top, bot);
+            var coord = new MapCoord(top, bot, 1);
             
             var life = new Life
             {
@@ -43,7 +40,7 @@ namespace Source.Systems
                 Parent = "Creator"
             };
 
-            var speed = _random.Range(0, 2);
+            var speed = _random.Range(1, 2);
             var motion = new Motion
             {
                 Weight = 1,

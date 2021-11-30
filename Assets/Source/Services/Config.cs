@@ -8,7 +8,7 @@ namespace Source
     {
         [SerializeField] private float _defaultFrameTime;
         [SerializeField] private float _worldTimeSpeed;
-        [SerializeField] private int _worldRadius;
+        [SerializeField] private int _worldSize;
 
         [SerializeField] private TileBase _grassTile;
         [SerializeField] private TileBase _dirtTile;
@@ -20,7 +20,7 @@ namespace Source
 
         public float DefaultFrameTime => _defaultFrameTime;
         public float WorldTimeSpeed => _worldTimeSpeed;
-        public int WorldRadius => _worldRadius;
+        public int WorldSize => _worldSize;
 
         public TileBase GrassTile => _grassTile;
         public TileBase DirtTile => _dirtTile;

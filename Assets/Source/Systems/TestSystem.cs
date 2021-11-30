@@ -1,5 +1,7 @@
 ﻿using Leopotam.Ecs;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace Source.Systems
 {
@@ -14,37 +16,26 @@ namespace Source.Systems
         private readonly EcsFilter<Tick> _ticks = default;
 
         private int _radius;
+        private Tilemap _map;
+        private TileBase _dirt;
+        private TileBase _grass;
 
         public void Init()
         {
+            _map = _scene.Map;
+            _dirt = _config.DirtTile;
+            _grass = _config.GrassTile;
+            
+            PaintMath.Put(_map, _dirt, new Vector3Int(0, 0, 0));
         }
 
         public void Run()
         {
-            if (_ticks.IsEmpty()) return;
-            if (_movableLife.IsEmpty()) return;
-
-            var ticksCount = _ticks.Get1(0).Count;
-            for (var t = 0; t < ticksCount; ++t)
-            {
-                foreach (var i in _movableLife)
-                {
-                    var entity = _movableLife.GetEntity(i);
-
-                    var coord = entity.Has<Moved>() ? 
-                        entity.Get<Moved>().Coord : 
-                        entity.Get<Coord>().Value;
-                    
-                    var distance = entity.Get<Motion>().Speed;
-                    for (var j = 0; j < distance; ++j)
-                    {
-                        var direction = (GridMath.Direction) _random.Range(0, 5);
-                        coord.Move(direction, distance);
-                    }
-                    
-                    entity.Get<Moved>().Coord = coord;
-                }
-            }
+            if(Input.GetMouseButton(1))
+                PaintMath.Put(_map, _grass, new Vector3Int(0, 0, 1));
+            
+            if(Input.GetMouseButton(0))
+                PaintMath.Clear(_map, new Vector3Int(0, 0, 1));
         }
     }
 }

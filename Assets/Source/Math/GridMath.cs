@@ -87,7 +87,7 @@ namespace Source
 
         public static Vector3Int GetPos(MapCoord globalCoord)
         {
-            return GetPos(Vector3Int.zero, globalCoord.Top, globalCoord.Bot);
+            return GetPos(new Vector3Int(0, 0, globalCoord.Layer), globalCoord.Top, globalCoord.Bot);
         }
 
         public static Vector3Int GetPos(Vector3Int relativePos, int top, int bot)

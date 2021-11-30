@@ -6,7 +6,7 @@ namespace Source
     {
         public float DefaultFrameTime { get; }
         public float WorldTimeSpeed { get; }
-        public int WorldRadius { get; }
+        public int WorldSize { get; }
         
         public TileBase GrassTile { get; }
         public TileBase DirtTile { get; }

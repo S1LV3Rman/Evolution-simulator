@@ -12,10 +12,21 @@ namespace Source.Systems
         {
             var dirtTile = _config.DirtTile;
             var grassTile = _config.GrassTile;
-            var radius = _config.WorldRadius;
-            var map = _scene.GroundMap;
+            var radius = _config.WorldSize;
+            var map = _scene.Map;
             
-            PaintMath.FullCircle(map, grassTile, Vector3Int.zero, radius);
+            PaintMath.Rhomb(map, grassTile, Vector3Int.zero, radius);
+
+            // var range = radius * 2 + 1;
+            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(range, 0)), radius);
+            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(-range, 0)), radius);
+            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(0, range)), radius);
+            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(0, -range)), radius);
+            //
+            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(range, range)), radius);
+            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(-range, -range)), radius);
+            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(-range, range)), radius);
+            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(range, -range)), radius);
         }
     }
 }

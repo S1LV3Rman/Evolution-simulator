@@ -15,7 +15,7 @@ namespace Source.Systems
         
         public void Init()
         {
-            _map = _scene.LandMap;
+            _map = _scene.Map;
         }
         
         public void Run()

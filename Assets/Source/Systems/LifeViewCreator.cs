@@ -17,7 +17,7 @@ namespace Source.Systems
         public void Init()
         {
             _lifeTile = _config.LifeTile;
-            _map = _scene.LandMap;
+            _map = _scene.Map;
         }
         
         public void Run()

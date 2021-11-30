@@ -57,6 +57,27 @@ namespace Source
             return positions;
         }
 
+        public static Vector3Int[] RhombPoints(Vector3Int centerPos, int radius)
+        {
+            var area = 4 * radius * (radius + 1) + 1;
+            var positions = new Vector3Int[area];
+
+            var n = 0;
+            
+            for (var t =  -radius; t <= radius; ++t)
+                for (var b = -radius; b <= radius; ++b)
+                    positions[n++] =  GridMath.GetPos(centerPos, t, b);
+
+            return positions;
+        }
+
+        public static void Rhomb(Tilemap map, TileBase tileBase,
+            Vector3Int centerCoord, int radius)
+        {
+            var points = RhombPoints(centerCoord, radius);
+            Fill(map, tileBase, points);
+        }
+
         public static void FullCircle(Tilemap map, TileBase tileBase,
             Vector3Int centerCoord, int radius)
         {

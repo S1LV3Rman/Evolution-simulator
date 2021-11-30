@@ -7,13 +7,46 @@ namespace Source
     {
         public int Top { get; private set; }
         public int Bot { get; private set; }
+        public int Layer { get; private set; }
 
         public MapCoord(int top, int bot)
         {
             Top = top;
             Bot = bot;
+            Layer = 0;
         }
 
+        public MapCoord(int top, int bot, int layer)
+        {
+            Top = top;
+            Bot = bot;
+            Layer = layer;
+        }
+
+
+        public void InvertOverEdge(int edge)
+        {
+            Top = InvertOverEdge(Top, edge);
+            Bot = InvertOverEdge(Bot, edge);
+        }
+
+        private int InvertOverEdge(int value, int edge)
+        {
+            if(value > 0)
+            {
+                var overstep = value - edge;
+                if (overstep > 0)
+                    value = overstep - edge - 1;
+            }
+            else
+            {
+                var overstep = value + edge;
+                if (overstep < 0)
+                    value = overstep + edge + 1;
+            }
+
+            return value;
+        }
 
         public void Move(GridMath.Direction direction, int distance = 1)
         {
