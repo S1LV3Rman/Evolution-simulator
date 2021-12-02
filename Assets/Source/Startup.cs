@@ -26,6 +26,7 @@ namespace Source
                 .Add(new LifeGenerator())
                 
                 .Add(new WorldTime())
+                .Add(new TouchController())
                 
                 .Add(new LifeMotion())
                 
