@@ -6,6 +6,11 @@ namespace Source
     [CreateAssetMenu(fileName = "GlobalConfig",menuName = "Config/Global Config")]
     public sealed class Config : ScriptableObject, IConfig
     {
+        [SerializeField] private float _cameraMinSize;
+        [SerializeField] private float _cameraMaxSize;
+        [SerializeField] private float _cameraSizeScaler;
+        [SerializeField] private float _cameraResizeTime;
+        
         [SerializeField] private float _defaultFrameTime;
         [SerializeField] private float _worldTimeSpeed;
         [SerializeField] private int _worldSize;
@@ -17,6 +22,12 @@ namespace Source
         
         [SerializeField] private int[] _testVariables;
 
+
+        public float CameraMinSize => _cameraMinSize;
+        public float CameraMaxSize => _cameraMaxSize;
+        public float CameraSizeScaler => _cameraSizeScaler;
+
+        public float CameraResizeTime => _cameraResizeTime;
 
         public float DefaultFrameTime => _defaultFrameTime;
         public float WorldTimeSpeed => _worldTimeSpeed;

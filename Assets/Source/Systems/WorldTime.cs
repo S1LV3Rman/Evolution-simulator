@@ -26,9 +26,7 @@ namespace Source.Systems
         {
             _timePassed += Time.deltaTime;
 
-            if (!_ticks.IsEmpty())
-                foreach (var i in _ticks)
-                    _ticks.GetEntity(i).Destroy();
+            _ticks.Clear();
 
             if (_timePassed >= _secPerFrame)
             {

@@ -2,7 +2,7 @@
 
 namespace Source.Systems
 {
-    public sealed class EventSubscriber<T> where T : class
+    public sealed class Subscriber<T>
     {
         private bool _trigger;
         private T _value;
@@ -10,7 +10,7 @@ namespace Source.Systems
         
         public T Value
         {
-            get => _trigger ? _value : null;
+            get => _trigger ? _value : default;
             private set => _value = value;
         }
 
@@ -29,13 +29,13 @@ namespace Source.Systems
             }
         }
 
-        public EventSubscriber(Action<T> onTrigger)
+        public Subscriber(Action<T> onTrigger)
         {
             _onTrigger = onTrigger;
             _trigger = false;
-            Value = null;
+            Value = default;
         }
 
-        public static implicit operator bool(EventSubscriber<T> subscriber) => subscriber._trigger;
+        public static implicit operator bool(Subscriber<T> subscriber) => subscriber._trigger;
     }
 }
