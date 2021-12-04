@@ -8,7 +8,6 @@ namespace Source
         public float CameraMaxSize { get; }
         public float CameraSizeScaler { get; }
         public float CameraResizeTime { get; }
-        public float DefaultFrameTime { get; }
         public float WorldTimeSpeed { get; }
         public int WorldSize { get; }
         

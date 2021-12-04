@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Source.UI;
+using UnityEngine;
 using UnityEngine.Tilemaps;
 
 namespace Source
@@ -7,5 +8,6 @@ namespace Source
     {
         public Camera Camera { get; }
         public Tilemap Map { get; }
+        public MainCanvas Canvas { get; }
     }
 }

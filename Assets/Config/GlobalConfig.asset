@@ -15,6 +15,7 @@ MonoBehaviour:
   _cameraMinSize: 1
   _cameraMaxSize: 100
   _cameraSizeScaler: 0.15
+  _cameraResizeTime: 0.25
   _defaultFrameTime: 1
   _worldTimeSpeed: 10
   _worldSize: 100

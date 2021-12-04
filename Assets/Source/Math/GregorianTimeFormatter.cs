@@ -43,6 +43,7 @@
         private readonly int hoursPerDay = 24;
         private readonly int minPerHour = 60;
         private readonly float secPerMin = 60f;
+        private readonly float _realSecPerSec = 1f;
 
         public bool[] LeapYears => leapYears;
         public int MonthsPerYear => monthsPerYear;
@@ -51,5 +52,7 @@
         public int HoursPerDay => hoursPerDay;
         public int MinPerHour => minPerHour;
         public float SecPerMin => secPerMin;
+
+        public float RealSecPerSec => _realSecPerSec;
     }
 }

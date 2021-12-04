@@ -168,9 +168,19 @@ namespace Source
             month %= timeFormat.MonthsPerYear;
         }
 
-        public override string ToString()
+        public string TimeToString()
         {
             return $"{hour:D2}:{min:D2}:{Mathf.FloorToInt(sec):D2}";
+        }
+
+        public string DateToString()
+        {
+            return $"{day + 1:D2}:{month + 1:D2}:{year + 1:D4}";
+        }
+
+        public override string ToString()
+        {
+            return $"{DateToString()} {TimeToString()}";
         }
     }
 }

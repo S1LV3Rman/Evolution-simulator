@@ -9,5 +9,7 @@
         public int HoursPerDay { get; }
         public int MinPerHour { get; }
         public float SecPerMin { get; }
+        
+        public float RealSecPerSec { get; }
     }
 }

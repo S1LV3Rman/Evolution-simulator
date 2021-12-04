@@ -11,7 +11,6 @@ namespace Source
         [SerializeField] private float _cameraSizeScaler;
         [SerializeField] private float _cameraResizeTime;
         
-        [SerializeField] private float _defaultFrameTime;
         [SerializeField] private float _worldTimeSpeed;
         [SerializeField] private int _worldSize;
 
@@ -29,7 +28,6 @@ namespace Source
 
         public float CameraResizeTime => _cameraResizeTime;
 
-        public float DefaultFrameTime => _defaultFrameTime;
         public float WorldTimeSpeed => _worldTimeSpeed;
         public int WorldSize => _worldSize;
 
