@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Source.Systems
+namespace Source
 {
     public sealed class Subscriber<T>
     {

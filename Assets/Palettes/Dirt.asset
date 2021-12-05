@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f747e8af38fbe4d8819f37be6fd5aa, type: 3}
   m_Name: Dirt
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
+  m_DefaultSprite: {fileID: -8239782725205642736, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 0
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: 21300000, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
-    - {fileID: 21300002, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
-    - {fileID: 21300004, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
-    - {fileID: 21300006, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
+    - {fileID: -8239782725205642736, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
+    - {fileID: 7303605154851015444, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
+    - {fileID: 1544049501077351568, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
+    - {fileID: 8529916361649386755, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1

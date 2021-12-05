@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Source.UI
+namespace Source
 {
     public class MainCanvas : MonoBehaviour
     {

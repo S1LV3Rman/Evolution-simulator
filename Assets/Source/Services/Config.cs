@@ -16,7 +16,7 @@ namespace Source
 
         [SerializeField] private TileBase _grassTile;
         [SerializeField] private TileBase _dirtTile;
-        [SerializeField] private TileBase _lifeTile;
+        [SerializeField] private Tile _blankTile;
         
         
         [SerializeField] private int[] _testVariables;
@@ -33,7 +33,7 @@ namespace Source
 
         public TileBase GrassTile => _grassTile;
         public TileBase DirtTile => _dirtTile;
-        public TileBase LifeTile => _lifeTile;
+        public Tile BlankTile => _blankTile.Clone();
 
 
         public int[] TestVariables => _testVariables;

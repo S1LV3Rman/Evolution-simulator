@@ -194,6 +194,177 @@ TextureImporter:
   - first:
       213: 21300126
     second: HexTile_Sheet_1A_63
+  - first:
+      213: 8529916361649386755
+    second: HexTile_Sheet_BLANK_0
+  - first:
+      213: 1544049501077351568
+    second: HexTile_Sheet_BLANK_1
+  - first:
+      213: 7303605154851015444
+    second: HexTile_Sheet_BLANK_2
+  - first:
+      213: -8239782725205642736
+    second: HexTile_Sheet_BLANK_3
+  - first:
+      213: 4784883673229736435
+    second: HexTile_Sheet_BLANK_4
+  - first:
+      213: -4066168290396733032
+    second: HexTile_Sheet_BLANK_5
+  - first:
+      213: 482304620593592091
+    second: HexTile_Sheet_BLANK_6
+  - first:
+      213: 2742791894086318700
+    second: HexTile_Sheet_BLANK_7
+  - first:
+      213: -5438725238610078150
+    second: HexTile_Sheet_BLANK_8
+  - first:
+      213: -578397952805357220
+    second: HexTile_Sheet_BLANK_9
+  - first:
+      213: 9139060555001981337
+    second: HexTile_Sheet_BLANK_10
+  - first:
+      213: -3951900699473470424
+    second: HexTile_Sheet_BLANK_11
+  - first:
+      213: -2676314356249055471
+    second: HexTile_Sheet_BLANK_12
+  - first:
+      213: 6650429518222396020
+    second: HexTile_Sheet_BLANK_13
+  - first:
+      213: -4061109680799547542
+    second: HexTile_Sheet_BLANK_14
+  - first:
+      213: 65117080470931855
+    second: HexTile_Sheet_BLANK_15
+  - first:
+      213: 4961803050815634623
+    second: HexTile_Sheet_BLANK_16
+  - first:
+      213: -6842764005219384494
+    second: HexTile_Sheet_BLANK_17
+  - first:
+      213: -1746129097476999083
+    second: HexTile_Sheet_BLANK_18
+  - first:
+      213: 5286669840369387140
+    second: HexTile_Sheet_BLANK_19
+  - first:
+      213: 4285635685928249008
+    second: HexTile_Sheet_BLANK_20
+  - first:
+      213: -3471825594158457635
+    second: HexTile_Sheet_BLANK_21
+  - first:
+      213: -6442698544837321616
+    second: HexTile_Sheet_BLANK_22
+  - first:
+      213: 7464377101718905753
+    second: HexTile_Sheet_BLANK_23
+  - first:
+      213: -5865878909678379827
+    second: HexTile_Sheet_BLANK_24
+  - first:
+      213: -7966873616040667872
+    second: HexTile_Sheet_BLANK_25
+  - first:
+      213: -7160997964434605570
+    second: HexTile_Sheet_BLANK_26
+  - first:
+      213: -9218591288471480443
+    second: HexTile_Sheet_BLANK_27
+  - first:
+      213: 4170370136677260990
+    second: HexTile_Sheet_BLANK_28
+  - first:
+      213: 2030756889092215404
+    second: HexTile_Sheet_BLANK_29
+  - first:
+      213: 7070312025596933535
+    second: HexTile_Sheet_BLANK_30
+  - first:
+      213: 3142919399566597358
+    second: HexTile_Sheet_BLANK_31
+  - first:
+      213: 8178083350455813761
+    second: HexTile_Sheet_BLANK_32
+  - first:
+      213: 1103785756721094883
+    second: HexTile_Sheet_BLANK_33
+  - first:
+      213: -2392798499992535766
+    second: HexTile_Sheet_BLANK_34
+  - first:
+      213: 9064671107237836368
+    second: HexTile_Sheet_BLANK_35
+  - first:
+      213: 724757931470757813
+    second: HexTile_Sheet_BLANK_36
+  - first:
+      213: 126316556721661619
+    second: HexTile_Sheet_BLANK_37
+  - first:
+      213: 8235930788317926638
+    second: HexTile_Sheet_BLANK_38
+  - first:
+      213: 8269002457544049892
+    second: HexTile_Sheet_BLANK_39
+  - first:
+      213: 5695527841575237348
+    second: HexTile_Sheet_BLANK_40
+  - first:
+      213: -5334435444675227936
+    second: HexTile_Sheet_BLANK_41
+  - first:
+      213: -335625518205462224
+    second: HexTile_Sheet_BLANK_42
+  - first:
+      213: 620292758827311263
+    second: HexTile_Sheet_BLANK_43
+  - first:
+      213: 351845962144899907
+    second: HexTile_Sheet_BLANK_44
+  - first:
+      213: -9099120727338583020
+    second: HexTile_Sheet_BLANK_45
+  - first:
+      213: -3433905549109278454
+    second: HexTile_Sheet_BLANK_46
+  - first:
+      213: -5110489243404394443
+    second: HexTile_Sheet_BLANK_47
+  - first:
+      213: 5097975416716756060
+    second: HexTile_Sheet_BLANK_48
+  - first:
+      213: 4499671467734100265
+    second: HexTile_Sheet_BLANK_49
+  - first:
+      213: 1777363698131104283
+    second: HexTile_Sheet_BLANK_50
+  - first:
+      213: -8492846343566070384
+    second: HexTile_Sheet_BLANK_51
+  - first:
+      213: 2952505478867259412
+    second: HexTile_Sheet_BLANK_52
+  - first:
+      213: 652979439677379727
+    second: HexTile_Sheet_BLANK_53
+  - first:
+      213: -4620278951365605742
+    second: HexTile_Sheet_BLANK_54
+  - first:
+      213: 7762267246398453370
+    second: HexTile_Sheet_BLANK_55
+  - first:
+      213: -7768191602518669403
+    second: HexTile_Sheet_BLANK_56
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -283,7 +454,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_0
+      name: HexTile_Sheet_BLANK_0
       rect:
         serializedVersion: 2
         x: 64
@@ -291,20 +462,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcd1c4fccd010b64cb909473f0ebfd24
-      internalID: 21300000
+      spriteID: 30577ebccb9506670800000000000000
+      internalID: 8529916361649386755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_1
+      name: HexTile_Sheet_BLANK_1
       rect:
         serializedVersion: 2
         x: 288
@@ -312,20 +483,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d423894c14502b4428f39671c632b917
-      internalID: 21300002
+      spriteID: 09ca55b27d09d6510800000000000000
+      internalID: 1544049501077351568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_2
+      name: HexTile_Sheet_BLANK_2
       rect:
         serializedVersion: 2
         x: 512
@@ -333,20 +504,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e49b579d090b6644e8e4dce12052edc0
-      internalID: 21300004
+      spriteID: 41b4b92313e9b5560800000000000000
+      internalID: 7303605154851015444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_3
+      name: HexTile_Sheet_BLANK_3
       rect:
         serializedVersion: 2
         x: 736
@@ -354,20 +525,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 688e48b3fd393d2499b1a654d36e9fca
-      internalID: 21300006
+      spriteID: 012b7b5844966ad80800000000000000
+      internalID: -8239782725205642736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_4
+      name: HexTile_Sheet_BLANK_4
       rect:
         serializedVersion: 2
         x: 960
@@ -375,20 +546,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 438dee1b6d62fc947bc8d13df5a6fc81
-      internalID: 21300008
+      spriteID: 3f9bc627952576240800000000000000
+      internalID: 4784883673229736435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_5
+      name: HexTile_Sheet_BLANK_5
       rect:
         serializedVersion: 2
         x: 1184
@@ -396,20 +567,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 190170e890aee284bbeb495c990d58ce
-      internalID: 21300010
+      spriteID: 89102fdbb711297c0800000000000000
+      internalID: -4066168290396733032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_6
+      name: HexTile_Sheet_BLANK_6
       rect:
         serializedVersion: 2
         x: 1408
@@ -417,20 +588,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abc13ad00fba2ad4b9852d796dd9b30f
-      internalID: 21300012
+      spriteID: b17b2004f7d71b600800000000000000
+      internalID: 482304620593592091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_7
+      name: HexTile_Sheet_BLANK_7
       rect:
         serializedVersion: 2
         x: 1632
@@ -438,20 +609,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 279d7bc10a9ebec4ca3c9e5fef2aef5e
-      internalID: 21300014
+      spriteID: c6af5db12ba501620800000000000000
+      internalID: 2742791894086318700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_8
+      name: HexTile_Sheet_BLANK_8
       rect:
         serializedVersion: 2
         x: 64
@@ -459,20 +630,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d05487f3a9978a64baf26c7b96d21f92
-      internalID: 21300016
+      spriteID: a36d1b90634c584b0800000000000000
+      internalID: -5438725238610078150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_9
+      name: HexTile_Sheet_BLANK_9
       rect:
         serializedVersion: 2
         x: 288
@@ -480,20 +651,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 110fe9e9809b549439841add3d46aadb
-      internalID: 21300018
+      spriteID: c59393c502e19f7f0800000000000000
+      internalID: -578397952805357220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_10
+      name: HexTile_Sheet_BLANK_10
       rect:
         serializedVersion: 2
         x: 512
@@ -501,20 +672,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 341b8ee717f0d9a449bdc5d10f760b2b
-      internalID: 21300020
+      spriteID: 9996da9672774de70800000000000000
+      internalID: 9139060555001981337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_11
+      name: HexTile_Sheet_BLANK_11
       rect:
         serializedVersion: 2
         x: 736
@@ -522,20 +693,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fc6ef66a954f1340ad760ef4c00256d
-      internalID: 21300022
+      spriteID: 82c144c70470829c0800000000000000
+      internalID: -3951900699473470424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_12
+      name: HexTile_Sheet_BLANK_12
       rect:
         serializedVersion: 2
         x: 960
@@ -543,20 +714,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52e2b78f6dadeec47a621ed8304b492d
-      internalID: 21300024
+      spriteID: 11f2f70d542dbdad0800000000000000
+      internalID: -2676314356249055471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_13
+      name: HexTile_Sheet_BLANK_13
       rect:
         serializedVersion: 2
         x: 1184
@@ -564,20 +735,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cf63ee037ea2cd458e9cb33197bafd7
-      internalID: 21300026
+      spriteID: 47a0b6d49621b4c50800000000000000
+      internalID: 6650429518222396020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_14
+      name: HexTile_Sheet_BLANK_14
       rect:
         serializedVersion: 2
         x: 1408
@@ -585,20 +756,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4d6b40fb56ca1542b4daa28c38188be
-      internalID: 21300028
+      spriteID: a6ffa02134a04a7c0800000000000000
+      internalID: -4061109680799547542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_15
+      name: HexTile_Sheet_BLANK_15
       rect:
         serializedVersion: 2
         x: 1632
@@ -606,20 +777,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1cb41b4973bbe44caeee734dacbde9f
-      internalID: 21300030
+      spriteID: f89c742c3a757e000800000000000000
+      internalID: 65117080470931855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_16
+      name: HexTile_Sheet_BLANK_16
       rect:
         serializedVersion: 2
         x: 64
@@ -627,20 +798,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7f5d21ed506a8747a8848853335d5ee
-      internalID: 21300032
+      spriteID: fbcb051069ddbd440800000000000000
+      internalID: 4961803050815634623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_17
+      name: HexTile_Sheet_BLANK_17
       rect:
         serializedVersion: 2
         x: 288
@@ -648,20 +819,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8de0458ba72a5a4490676420a98c64c
-      internalID: 21300034
+      spriteID: 253c11b446e9901a0800000000000000
+      internalID: -6842764005219384494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_18
+      name: HexTile_Sheet_BLANK_18
       rect:
         serializedVersion: 2
         x: 512
@@ -669,20 +840,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 298d9e06d496b4946ad52cfdbfa13f45
-      internalID: 21300036
+      spriteID: 558f8e456d084c7e0800000000000000
+      internalID: -1746129097476999083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_19
+      name: HexTile_Sheet_BLANK_19
       rect:
         serializedVersion: 2
         x: 736
@@ -690,20 +861,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00811f467b272d141a1f330f3e234079
-      internalID: 21300038
+      spriteID: 4860df7b5360e5940800000000000000
+      internalID: 5286669840369387140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_20
+      name: HexTile_Sheet_BLANK_20
       rect:
         serializedVersion: 2
         x: 960
@@ -711,20 +882,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd266ab282d1b5f459bf30e185baf82d
-      internalID: 21300040
+      spriteID: 0b6ad7833f2a97b30800000000000000
+      internalID: 4285635685928249008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_21
+      name: HexTile_Sheet_BLANK_21
       rect:
         serializedVersion: 2
         x: 1184
@@ -732,20 +903,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31c49606b2f1e2347acd1fbd0d92e9a1
-      internalID: 21300042
+      spriteID: ddc5312440991dfc0800000000000000
+      internalID: -3471825594158457635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_22
+      name: HexTile_Sheet_BLANK_22
       rect:
         serializedVersion: 2
         x: 1408
@@ -753,20 +924,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb479a3f40de10d4f92e9039ff6a0c8a
-      internalID: 21300044
+      spriteID: 07c9b00fecfe696a0800000000000000
+      internalID: -6442698544837321616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_23
+      name: HexTile_Sheet_BLANK_23
       rect:
         serializedVersion: 2
         x: 1632
@@ -774,20 +945,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ea14b1f59ebab049af9ae41533f18ed
-      internalID: 21300046
+      spriteID: 993e3811d6bc69760800000000000000
+      internalID: 7464377101718905753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_24
+      name: HexTile_Sheet_BLANK_24
       rect:
         serializedVersion: 2
         x: 64
@@ -795,20 +966,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50b49867d34616f4184065556df168a9
-      internalID: 21300048
+      spriteID: dcc1a2dd536389ea0800000000000000
+      internalID: -5865878909678379827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_25
+      name: HexTile_Sheet_BLANK_25
       rect:
         serializedVersion: 2
         x: 288
@@ -816,20 +987,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9be3edf9601135c40ba150311d01a712
-      internalID: 21300050
+      spriteID: 025d67118aaff6190800000000000000
+      internalID: -7966873616040667872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_26
+      name: HexTile_Sheet_BLANK_26
       rect:
         serializedVersion: 2
         x: 512
@@ -837,20 +1008,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17fed5d990b711343ae78fa435d8c383
-      internalID: 21300052
+      spriteID: ef9749cba460f9c90800000000000000
+      internalID: -7160997964434605570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_27
+      name: HexTile_Sheet_BLANK_27
       rect:
         serializedVersion: 2
         x: 736
@@ -858,20 +1029,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e47007183c8c3a245888103b7fd3ec49
-      internalID: 21300054
+      spriteID: 5879529b01cf01080800000000000000
+      internalID: -9218591288471480443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_28
+      name: HexTile_Sheet_BLANK_28
       rect:
         serializedVersion: 2
         x: 960
@@ -879,20 +1050,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef54bb1bb5515f64ab14eee17a9108a2
-      internalID: 21300056
+      spriteID: ebe9b823b8120e930800000000000000
+      internalID: 4170370136677260990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_29
+      name: HexTile_Sheet_BLANK_29
       rect:
         serializedVersion: 2
         x: 1184
@@ -900,20 +1071,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b65e3d84b36553c48a4009dac9f381f3
-      internalID: 21300058
+      spriteID: c62d48791a2be2c10800000000000000
+      internalID: 2030756889092215404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_30
+      name: HexTile_Sheet_BLANK_30
       rect:
         serializedVersion: 2
         x: 1408
@@ -921,20 +1092,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c513418e4357149448ad703655fb4324
-      internalID: 21300060
+      spriteID: f95b0e0c35bce1260800000000000000
+      internalID: 7070312025596933535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_31
+      name: HexTile_Sheet_BLANK_31
       rect:
         serializedVersion: 2
         x: 1632
@@ -942,20 +1113,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0eccd3efcdc73694780f5e4c0301adcc
-      internalID: 21300062
+      spriteID: eecd9d0ca84ed9b20800000000000000
+      internalID: 3142919399566597358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_32
+      name: HexTile_Sheet_BLANK_32
       rect:
         serializedVersion: 2
         x: 64
@@ -963,20 +1134,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d96f4c4311f8833418a9462a79424c93
-      internalID: 21300064
+      spriteID: 18684775a736e7170800000000000000
+      internalID: 8178083350455813761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_33
+      name: HexTile_Sheet_BLANK_33
       rect:
         serializedVersion: 2
         x: 288
@@ -984,20 +1155,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 781ed6820f495754bb10f472dc24a35d
-      internalID: 21300066
+      spriteID: 3e02f713c4f615f00800000000000000
+      internalID: 1103785756721094883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_34
+      name: HexTile_Sheet_BLANK_34
       rect:
         serializedVersion: 2
         x: 512
@@ -1005,20 +1176,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d435a2ffbcb82864f91d6ae75514ff22
-      internalID: 21300068
+      spriteID: a2d7bdc11721bced0800000000000000
+      internalID: -2392798499992535766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_35
+      name: HexTile_Sheet_BLANK_35
       rect:
         serializedVersion: 2
         x: 736
@@ -1026,20 +1197,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7cefef0f3885d943b841b02781e999e
-      internalID: 21300070
+      spriteID: 05678a8685e2ccd70800000000000000
+      internalID: 9064671107237836368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_36
+      name: HexTile_Sheet_BLANK_36
       rect:
         serializedVersion: 2
         x: 960
@@ -1047,20 +1218,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b045ed54c369a534c8affd163ce40617
-      internalID: 21300072
+      spriteID: 5bf167daf7bde0a00800000000000000
+      internalID: 724757931470757813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_37
+      name: HexTile_Sheet_BLANK_37
       rect:
         serializedVersion: 2
         x: 1184
@@ -1068,20 +1239,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c4fcb663ca7eff479c6e651940bc651
-      internalID: 21300074
+      spriteID: 3b625a43d34c0c100800000000000000
+      internalID: 126316556721661619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_38
+      name: HexTile_Sheet_BLANK_38
       rect:
         serializedVersion: 2
         x: 1408
@@ -1089,20 +1260,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f76fe7ba295f7943bed642d1eed6200
-      internalID: 21300076
+      spriteID: ee494688a67eb4270800000000000000
+      internalID: 8235930788317926638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_39
+      name: HexTile_Sheet_BLANK_39
       rect:
         serializedVersion: 2
         x: 1632
@@ -1110,41 +1281,41 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8273a6bdf0b16fe48b8ae25c8344642d
-      internalID: 21300078
+      spriteID: 4e4ceb09ce561c270800000000000000
+      internalID: 8269002457544049892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_40
+      name: HexTile_Sheet_BLANK_40
       rect:
         serializedVersion: 2
-        x: 64
+        x: 63
         y: 704
-        width: 192
+        width: 194
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e1ea8c119b3a5546bb1e64c4140cdc3
-      internalID: 21300080
+      spriteID: 4e6707d45649a0f40800000000000000
+      internalID: 5695527841575237348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_41
+      name: HexTile_Sheet_BLANK_41
       rect:
         serializedVersion: 2
         x: 288
@@ -1152,20 +1323,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c8ba7a6b3c634a48ae0ccb678362792
-      internalID: 21300082
+      spriteID: 0ee41e2e93748f5b0800000000000000
+      internalID: -5334435444675227936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_42
+      name: HexTile_Sheet_BLANK_42
       rect:
         serializedVersion: 2
         x: 512
@@ -1173,20 +1344,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ddca27cce973a74489303ea0dc78c52
-      internalID: 21300084
+      spriteID: 0399ec19e5e975bf0800000000000000
+      internalID: -335625518205462224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_43
+      name: HexTile_Sheet_BLANK_43
       rect:
         serializedVersion: 2
         x: 736
@@ -1194,20 +1365,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dae4f8f948d768c4aab8fc74c31a3a36
-      internalID: 21300086
+      spriteID: f9026aa4af8bb9800800000000000000
+      internalID: 620292758827311263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_44
+      name: HexTile_Sheet_BLANK_44
       rect:
         serializedVersion: 2
         x: 960
@@ -1215,20 +1386,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c01b0a3e08174d047bf9a55c1e0f62c2
-      internalID: 21300088
+      spriteID: 3436d45d90202e400800000000000000
+      internalID: 351845962144899907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_45
+      name: HexTile_Sheet_BLANK_45
       rect:
         serializedVersion: 2
         x: 1184
@@ -1236,20 +1407,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea57a6fe6c2856744a0a297d5cd3b3db
-      internalID: 21300090
+      spriteID: 41cf69e58ed69b180800000000000000
+      internalID: -9099120727338583020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_46
+      name: HexTile_Sheet_BLANK_46
       rect:
         serializedVersion: 2
         x: 1408
@@ -1257,20 +1428,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3554bf6ad587e245a7f567468f2807c
-      internalID: 21300092
+      spriteID: a094911c8115850d0800000000000000
+      internalID: -3433905549109278454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_47
+      name: HexTile_Sheet_BLANK_47
       rect:
         serializedVersion: 2
         x: 1632
@@ -1278,62 +1449,62 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c97cb1ed6c6fd6c47a81c254552bb9bb
-      internalID: 21300094
+      spriteID: 5302d621c15e319b0800000000000000
+      internalID: -5110489243404394443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_48
+      name: HexTile_Sheet_BLANK_48
       rect:
         serializedVersion: 2
-        x: 736
+        x: 732
+        y: 480
+        width: 196
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54831b91a5afb640800000000000000
+      internalID: 5097975416716756060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_BLANK_49
+      rect:
+        serializedVersion: 2
+        x: 960
         y: 480
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cd9cb1d36da6a24aa25027f9216bd90
-      internalID: 21300096
+      spriteID: 92960401c5b027e30800000000000000
+      internalID: 4499671467734100265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_49
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 480
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b24deeab2d19caf4ca31ff9d41abab6c
-      internalID: 21300098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HexTile_Sheet_1A_50
+      name: HexTile_Sheet_BLANK_50
       rect:
         serializedVersion: 2
         x: 1184
@@ -1341,20 +1512,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1642f5a15584c84d8a8d2f5ea4eeb66
-      internalID: 21300100
+      spriteID: b1277c7ddd67aa810800000000000000
+      internalID: 1777363698131104283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_51
+      name: HexTile_Sheet_BLANK_51
       rect:
         serializedVersion: 2
         x: 1408
@@ -1362,20 +1533,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e79b547b7cade946a06680a314afc43
-      internalID: 21300102
+      spriteID: 09de4cf5f39532a80800000000000000
+      internalID: -8492846343566070384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_52
+      name: HexTile_Sheet_BLANK_52
       rect:
         serializedVersion: 2
         x: 1632
@@ -1383,20 +1554,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf2b02745bb55f9428a42742b0bf2cac
-      internalID: 21300104
+      spriteID: 4101749071869f820800000000000000
+      internalID: 2952505478867259412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_53
+      name: HexTile_Sheet_BLANK_53
       rect:
         serializedVersion: 2
         x: 960
@@ -1404,20 +1575,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fadfd770660a0c44aa587f94ee419c1
-      internalID: 21300106
+      spriteID: f849a9b3759df0900800000000000000
+      internalID: 652979439677379727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_54
+      name: HexTile_Sheet_BLANK_54
       rect:
         serializedVersion: 2
         x: 1184
@@ -1425,20 +1596,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e03a69d3ec284948b86ad763797eaea
-      internalID: 21300108
+      spriteID: 29683a4e5c871efb0800000000000000
+      internalID: -4620278951365605742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_55
+      name: HexTile_Sheet_BLANK_55
       rect:
         serializedVersion: 2
         x: 1408
@@ -1446,20 +1617,20 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc69fdd7c08e9844aac5fe95ae8eec48
-      internalID: 21300110
+      spriteID: a76ba313fec19bb60800000000000000
+      internalID: 7762267246398453370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HexTile_Sheet_1A_56
+      name: HexTile_Sheet_BLANK_56
       rect:
         serializedVersion: 2
         x: 1632
@@ -1467,14 +1638,14 @@ TextureImporter:
         width: 192
         height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c69f369b32b7c74fbf70796184b4b7d
-      internalID: 21300112
+      spriteID: 5a7c3b825e6d13490800000000000000
+      internalID: -7768191602518669403
       vertices: []
       indices: 
       edges: []

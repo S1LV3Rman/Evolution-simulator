@@ -1,24 +1,13 @@
 ﻿using Leopotam.Ecs;
-using UnityEngine;
-using UnityEngine.Tilemaps;
 
-namespace Source.Systems
+namespace Source
 {
-    public class LifeViewCreator : IEcsInitSystem, IEcsRunSystem
+    public class LifeViewCreator : IEcsRunSystem
     {
         private readonly IConfig _config = default;
         private readonly ISceneContext _scene = default;
 
         private readonly EcsFilter<Life, Awake> _awakenedLife = default;
-
-        private TileBase _lifeTile;
-        private Tilemap _map;
-        
-        public void Init()
-        {
-            _lifeTile = _config.LifeTile;
-            _map = _scene.Map;
-        }
         
         public void Run()
         {
@@ -30,12 +19,11 @@ namespace Source.Systems
                 
                 var coord = entity.Get<Coord>().Value;
                 var point = GridMath.GetPos(coord);
-                PaintMath.Put(_map, _lifeTile, point);
+                var tile = entity.Get<LifeTile>().Appearance;
+                PaintMath.Put(_scene.Map, tile, point);
                 
-                var life = _awakenedLife.GetEntity(i);
-                life.Get<Tile>().Value = _lifeTile;
-                life.Del<Awake>();
-                life.Get<Alive>();
+                entity.Del<Awake>();
+                entity.Get<Alive>();
             }
         }
     }

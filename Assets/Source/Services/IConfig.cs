@@ -13,7 +13,7 @@ namespace Source
         
         public TileBase GrassTile { get; }
         public TileBase DirtTile { get; }
-        public TileBase LifeTile { get; }
+        public Tile BlankTile { get; }
         
         
         public int[] TestVariables { get; }

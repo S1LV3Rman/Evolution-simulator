@@ -16,10 +16,9 @@ MonoBehaviour:
   _cameraMaxSize: 100
   _cameraSizeScaler: 0.15
   _cameraResizeTime: 0.25
-  _defaultFrameTime: 1
-  _worldTimeSpeed: 10
-  _worldSize: 100
+  _worldTimeSpeed: 60
+  _worldSize: 50
   _grassTile: {fileID: 11400000, guid: ae14badd7c360c542b11ddec2739e8fd, type: 2}
   _dirtTile: {fileID: 11400000, guid: 5888abb116ec7b6498336eb1e13ac4f9, type: 2}
-  _lifeTile: {fileID: 11400000, guid: c3d8b40928af5984fba59067b212a875, type: 2}
+  _blankTile: {fileID: 11400000, guid: 0e70ad5a09b0e2d4dab717c012c20bfe, type: 2}
   _testVariables: 0a00000003000000

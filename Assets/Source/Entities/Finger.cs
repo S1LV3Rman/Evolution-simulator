@@ -1,5 +1,4 @@
 ﻿using Lean.Touch;
-using Leopotam.Ecs;
 
 namespace Source
 {

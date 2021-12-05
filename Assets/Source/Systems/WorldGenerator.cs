@@ -1,32 +1,36 @@
-﻿using Leopotam.Ecs;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Leopotam.Ecs;
+using Unity.VisualScripting;
 using UnityEngine;
 
-namespace Source.Systems
+namespace Source
 {
     public class WorldGenerator : IEcsInitSystem
     {
+        private readonly EcsWorld _world = default;
         private readonly IConfig _config = default;
-        private readonly ISceneContext _scene = default;
-        
+
         public void Init()
         {
-            var dirtTile = _config.DirtTile;
-            var grassTile = _config.GrassTile;
-            var radius = _config.WorldSize;
-            var map = _scene.Map;
+            var groundPoints = CreateLayer(0);
+            var landPoints = CreateLayer(1);
             
-            PaintMath.Rhomb(map, grassTile, Vector3Int.zero, radius);
+            var worldEntity = _world.NewEntity();
+            ref var map = ref worldEntity.Get<WorldMap>().Value;
+            map = groundPoints.ToDictionary(point => point, point => _config.GrassTile);
+            foreach (var point in landPoints)
+                map.Add(point, null);
+            
+            var changesEntity = _world.NewEntity();
+            ref var changedCells = ref changesEntity.Get<ChangedCells>().Value;
+            changedCells = groundPoints.ToList();
+        }
 
-            // var range = radius * 2 + 1;
-            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(range, 0)), radius);
-            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(-range, 0)), radius);
-            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(0, range)), radius);
-            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(0, -range)), radius);
-            //
-            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(range, range)), radius);
-            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(-range, -range)), radius);
-            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(-range, range)), radius);
-            // PaintMath.Rhomb(map, dirtTile, GridMath.GetPos(new MapCoord(range, -range)), radius);
+        private MapCoord[] CreateLayer(int layer)
+        {
+            return new MapCoord(layer).GetRhomb(_config.WorldSize);
         }
     }
 }

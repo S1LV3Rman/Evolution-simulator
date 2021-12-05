@@ -1,5 +1,4 @@
 ﻿using Leopotam.Ecs;
-using Source.Systems;
 using UnityEngine;
 
 namespace Source
@@ -25,11 +24,15 @@ namespace Source
                 .Add(new WorldGenerator())
                 .Add(new LifeGenerator())
                 
+                .Add(new WorldViewController())
+                
                 .Add(new WorldTime())
                 .Add(new TouchHandler())
                 .Add(new InputHandler())
                 
                 .Add(new CameraController())
+                    
+                .Add(new ClockController())
                 
                 .Add(new LifeMotion())
                 

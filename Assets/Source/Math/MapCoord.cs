@@ -9,6 +9,13 @@ namespace Source
         public int Bot { get; private set; }
         public int Layer { get; private set; }
 
+        public MapCoord(int layer)
+        {
+            Top = 0;
+            Bot = 0;
+            Layer = layer;
+        }
+
         public MapCoord(int top, int bot)
         {
             Top = top;
@@ -21,6 +28,13 @@ namespace Source
             Top = top;
             Bot = bot;
             Layer = layer;
+        }
+
+        public MapCoord(Vector3Int coord)
+        {
+            Top = coord.x;
+            Bot = coord.y;
+            Layer = coord.z;
         }
 
 
@@ -93,5 +107,13 @@ namespace Source
         {
             Bot -= distance;
         }
+
+        public Vector3Int GetPos()
+        {
+            return GridMath.GetPos(this);
+        }
+
+        public static MapCoord operator +(MapCoord a, MapCoord b) =>
+            new MapCoord(a.Top + b.Top, a.Bot + b.Bot, a.Layer + b.Layer);
     }
 }

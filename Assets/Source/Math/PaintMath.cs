@@ -57,49 +57,49 @@ namespace Source
             return positions;
         }
 
-        public static Vector3Int[] RhombPoints(Vector3Int centerPos, int radius)
+        public static Vector3Int[] RhombPoints(Vector3Int centerPos, int size)
         {
-            var area = 4 * radius * (radius + 1) + 1;
+            var area = 4 * size * (size + 1) + 1;
             var positions = new Vector3Int[area];
 
             var n = 0;
             
-            for (var t =  -radius; t <= radius; ++t)
-                for (var b = -radius; b <= radius; ++b)
+            for (var t =  -size; t <= size; ++t)
+                for (var b = -size; b <= size; ++b)
                     positions[n++] =  GridMath.GetPos(centerPos, t, b);
 
             return positions;
         }
 
-        public static void Rhomb(Tilemap map, TileBase tileBase,
+        public static void PaintRhomb(this Tilemap map, TileBase tileBase,
             Vector3Int centerCoord, int radius)
         {
             var points = RhombPoints(centerCoord, radius);
             Fill(map, tileBase, points);
         }
 
-        public static void FullCircle(Tilemap map, TileBase tileBase,
+        public static void PaintFullCircle(this Tilemap map, TileBase tileBase,
             Vector3Int centerCoord, int radius)
         {
             var points = FullCirclePoints(centerCoord, radius);
             Fill(map, tileBase, points);
         }
 
-        public static void WireCircle(Tilemap map, TileBase tileBase,
+        public static void PaintWireCircle(this Tilemap map, TileBase tileBase,
             Vector3Int centerCoord, int radius)
         {
             var points = WireCirclePoints(centerCoord, radius);
             Fill(map, tileBase, points);
         }
 
-        public static void Ray(Tilemap map, TileBase tileBase,
+        public static void PaintRay(this Tilemap map, TileBase tileBase,
             Vector3Int startCord, int length, GridMath.Direction direction)
         {
             var points = RayPoints(startCord, length, direction);
             Fill(map, tileBase, points);
         }
 
-        public static void Fill(Tilemap map, TileBase tileBase, Vector3Int[] positions)
+        public static void Fill(this Tilemap map, TileBase tileBase, Vector3Int[] positions)
         {
             var tiles = new TileBase[positions.Length];
 
@@ -109,24 +109,19 @@ namespace Source
             map.SetTiles(positions, tiles);
         }
 
-        public static void Put(Tilemap map, TileBase tileBase, Vector3Int position)
+        public static void Put(this Tilemap map, TileBase tileBase, Vector3Int position)
         {
             map.SetTile(position, tileBase);
         }
 
-        public static void Clear(Tilemap map, Vector3Int position)
+        public static void Clear(this Tilemap map, Vector3Int position)
         {
             map.SetTile(position, null);
         }
 
-        public static void Clear(Tilemap map, Vector3Int[] positions)
+        public static void Clear(this Tilemap map, Vector3Int[] positions)
         {
             map.SetTiles(positions, null);
-        }
-
-        public static TileBase GetTile(Tilemap map, Vector3Int position)
-        {
-            return map.GetTile(position);
         }
     }
 }

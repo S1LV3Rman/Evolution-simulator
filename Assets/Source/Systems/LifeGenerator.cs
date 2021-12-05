@@ -1,21 +1,21 @@
-﻿using Leopotam.Ecs;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Leopotam.Ecs;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
-namespace Source.Systems
+namespace Source
 {
     public class LifeGenerator : IEcsInitSystem, IEcsRunSystem
     {
+        private readonly IConfig _config = default;
         private readonly EcsWorld _world = default;
         private readonly IRandomService _random = default;
-        private readonly IConfig _config = default;
+        
+        private readonly EcsFilter<WorldMap> _worlds = default;
 
-        private int _radius;
-        
-        
         public void Init()
         {
-            _radius = _config.WorldSize;
-            
             for(var i = 0; i < _config.TestVariables[1]; ++i)
                 CreateCell();
         }
@@ -27,12 +27,10 @@ namespace Source.Systems
         
         private void CreateCell()
         {
-            var top = _random.Range(-_radius, _radius);
-            var bot = top > 0 ? 
-                _random.Range(-_radius + top, _radius) : 
-                _random.Range(-_radius, _radius + top);
-
-            var coord = new MapCoord(top, bot, 1);
+            var map = _worlds.Get1(0).Value;
+            var freePlaces = map.Where(pair => pair.Value == null).ToArray();
+            var placeId = _random.Range(0, freePlaces.Length - 1);
+            var coord = freePlaces.ElementAt(placeId).Key;
             
             var life = new Life
             {
@@ -40,18 +38,29 @@ namespace Source.Systems
                 Parent = "Creator"
             };
 
-            var speed = _random.Range(1, 2);
+            var tile = _config.BlankTile;
+            tile.color = new Color(
+                _random.Range(0f, 1f),
+                _random.Range(0f, 1f),
+                _random.Range(0f, 1f));
+
+            var speed = _random.Range(2, 3);
             var motion = new Motion
             {
                 Weight = 1,
                 Speed = speed
             };
 
-            var entity = _world.NewEntity();
-            entity.Get<Life>() = life;
-            entity.Get<Coord>().Value = coord;
-            if (speed > 0) entity.Get<Motion>() = motion;
-            entity.Get<Awake>();
+            var lifeEntity = _world.NewEntity();
+            lifeEntity.Get<Life>() = life;
+            lifeEntity.Get<Coord>().Value = coord;
+            lifeEntity.Get<LifeTile>().SetTile(tile);
+            if (speed > 0) lifeEntity.Get<Motion>() = motion;
+            lifeEntity.Get<Awake>();
+
+            map[coord] = tile;
+            var changesEntity = _world.NewEntity();
+            changesEntity.Get<ChangedCells>().Value = new List<MapCoord>(new[] { coord });
         }
     }
 }

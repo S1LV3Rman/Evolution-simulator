@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace Source.UI
+namespace Source
 {
     public class TopToolbar : MonoBehaviour
     {

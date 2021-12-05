@@ -1,6 +1,8 @@
-﻿using Leopotam.Ecs;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Leopotam.Ecs;
 
-namespace Source.Systems
+namespace Source
 {
     public class LifeMotion : IEcsInitSystem, IEcsRunSystem
     {
@@ -9,6 +11,7 @@ namespace Source.Systems
 
         private readonly EcsFilter<Life, Motion, Alive> _movableLife = default;
         private readonly EcsFilter<Tick> _ticks = default;
+        private readonly EcsFilter<WorldMap> _worlds = default;
 
         private int _worldRadius;
 
@@ -30,17 +33,23 @@ namespace Source.Systems
                     var entity = _movableLife.GetEntity(i);
 
                     var coord = entity.Has<Moved>() ? 
-                        entity.Get<Moved>().Coord : 
+                        entity.Get<Moved>().Path.Last() : 
                         entity.Get<Coord>().Value;
                     
+                    if(!entity.Has<Moved>())
+                        entity.Get<Moved>().Path = new List<MapCoord>();
+                    
                     var distance = entity.Get<Motion>().Speed;
+                    var possibleDestinations = coord.GetCircle(distance);
+                    
                     for (var j = 0; j < distance; ++j)
                     {
                         var direction = (GridMath.Direction) _random.Range(0, 5);
-                        coord.Move(direction, distance);
+                        coord.Move(direction);
                         coord.InvertOverEdge(_worldRadius);
+                        
+                        entity.Get<Moved>().Path.Add(coord);
                     }
-                    entity.Get<Moved>().Coord = coord;
                 }
             }
         }

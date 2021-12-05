@@ -1,6 +1,6 @@
 ﻿using Leopotam.Ecs;
 
-namespace Source.Systems
+namespace Source
 {
     public static class FilterExtension
     {

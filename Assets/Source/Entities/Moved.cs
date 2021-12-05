@@ -1,9 +1,9 @@
-﻿using Leopotam.Ecs;
+﻿using System.Collections.Generic;
 
 namespace Source
 {
     public struct Moved
     {
-        public MapCoord Coord;
+        public List<MapCoord> Path;
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
 
-namespace Source.Systems
+namespace Source
 {
     public class InputHandler : IEcsRunSystem
     {

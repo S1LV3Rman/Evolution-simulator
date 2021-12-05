@@ -1,9 +1,8 @@
 ﻿using Leopotam.Ecs;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Source.Systems
+namespace Source
 {
     public class TestSystem : IEcsInitSystem, IEcsRunSystem
     {

@@ -1,6 +1,4 @@
-﻿using Leopotam.Ecs;
-
-namespace Source
+﻿namespace Source
 {
     public struct Tick
     {
