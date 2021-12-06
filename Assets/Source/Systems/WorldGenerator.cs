@@ -19,13 +19,14 @@ namespace Source
             
             var worldEntity = _world.NewEntity();
             ref var map = ref worldEntity.Get<WorldMap>().Value;
-            map = groundPoints.ToDictionary(point => point, point => _config.GrassTile);
+            map = groundPoints.ToDictionary(point => point,
+                point => new Cell(CellType.Grass, _config.GrassTile));
             foreach (var point in landPoints)
-                map.Add(point, null);
+                map.Add(point, new Cell());
             
             var changesEntity = _world.NewEntity();
             ref var changedCells = ref changesEntity.Get<ChangedCells>().Value;
-            changedCells = groundPoints.ToList();
+            changedCells = groundPoints;
         }
 
         private MapCoord[] CreateLayer(int layer)

@@ -34,10 +34,9 @@ namespace Source
                     
                 .Add(new ClockController())
                 
-                .Add(new LifeMotion())
+                .Add(new LifeMotionPrediction())
                 
-                .Add(new LifeViewCreator())
-                .Add(new LifeViewMover())
+                .Add(new LifeMotionRealization())
                 
                 //.Add(new TestSystem())
 

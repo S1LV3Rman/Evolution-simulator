@@ -9,15 +9,6 @@ namespace Source
         private static int  odd(this int value) => value % 2 == 0 ? 0 : 1;
     
 
-        public enum Direction
-        {
-            TopRight    = 0,
-            Right       = 1,
-            BottomRight = 2,
-            BottomLeft  = 3,
-            Left        = 4,
-            TopLeft     = 5,
-        }
         
         public static void Move(ref this Vector3Int pos, Direction direction)
         {

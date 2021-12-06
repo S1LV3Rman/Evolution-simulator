@@ -62,16 +62,16 @@ namespace Source
             return value;
         }
 
-        public void Move(GridMath.Direction direction, int distance = 1)
+        public void Move(Direction direction, int distance = 1)
         {
             switch (direction)
             {
-                case GridMath.Direction.TopRight: MoveTopRight(distance); break;
-                case GridMath.Direction.Right: MoveRight(distance); break;
-                case GridMath.Direction.BottomRight: MoveBottomRight(distance); break;
-                case GridMath.Direction.BottomLeft: MoveBottomLeft(distance); break;
-                case GridMath.Direction.Left: MoveLeft(distance); break;
-                case GridMath.Direction.TopLeft: MoveTopLeft(distance); break;
+                case Direction.TopRight: MoveTopRight(distance); break;
+                case Direction.Right: MoveRight(distance); break;
+                case Direction.BottomRight: MoveBottomRight(distance); break;
+                case Direction.BottomLeft: MoveBottomLeft(distance); break;
+                case Direction.Left: MoveLeft(distance); break;
+                case Direction.TopLeft: MoveTopLeft(distance); break;
                 default: throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
             }
         }

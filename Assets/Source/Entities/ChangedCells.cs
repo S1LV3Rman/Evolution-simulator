@@ -5,6 +5,6 @@ namespace Source
 {
     public struct ChangedCells
     {
-        public List<MapCoord> Value;
+        public MapCoord[] Value;
     }
 }

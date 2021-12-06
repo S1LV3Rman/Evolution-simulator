@@ -5,7 +5,7 @@ namespace Source
 {
     public static class PaintMath
     {
-        public static Vector3Int[] RayPoints(Vector3Int startCord, int length, GridMath.Direction direction)
+        public static Vector3Int[] RayPoints(Vector3Int startCord, int length, Direction direction)
         {
             var positions = new Vector3Int[length];
             
@@ -93,7 +93,7 @@ namespace Source
         }
 
         public static void PaintRay(this Tilemap map, TileBase tileBase,
-            Vector3Int startCord, int length, GridMath.Direction direction)
+            Vector3Int startCord, int length, Direction direction)
         {
             var points = RayPoints(startCord, length, direction);
             Fill(map, tileBase, points);

@@ -21,9 +21,7 @@ namespace Source
                 var changedCells = _changes.Get1(i).Value;
                 
                 foreach (var cell in changedCells)
-                    _scene.Map.Put(map[cell], cell.GetPos());
-                
-                changedCells.Clear();
+                    _scene.Map.Put(map[cell].Tile, cell.GetPos());
             }
             _changes.Clear();
         }

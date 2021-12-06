@@ -1,4 +1,6 @@
-﻿namespace Source
+﻿using System;
+
+namespace Source
 {
     public static class MapCoordExtension
     {
@@ -35,6 +37,20 @@
             }
 
             return coords;
+        }
+
+        public static MapCoord GetNeighbourCoord(this MapCoord coord, Direction direction)
+        {
+            return direction switch
+            {
+                Direction.TopRight    => new MapCoord(coord.Top + 1, coord.Bot, coord.Layer),
+                Direction.Right       => new MapCoord(coord.Top + 1, coord.Bot + 1, coord.Layer),
+                Direction.BottomRight => new MapCoord(coord.Top, coord.Bot + 1, coord.Layer),
+                Direction.BottomLeft  => new MapCoord(coord.Top - 1, coord.Bot, coord.Layer),
+                Direction.Left        => new MapCoord(coord.Top - 1, coord.Bot - 1, coord.Layer),
+                Direction.TopLeft     => new MapCoord(coord.Top, coord.Bot - 1, coord.Layer),
+                _ => throw new ArgumentOutOfRangeException(nameof(direction), direction, null)
+            };
         }
         
         public static void InvertOverEdge(this MapCoord[] coords, int edge)
