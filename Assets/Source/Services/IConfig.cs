@@ -11,6 +11,11 @@ namespace Source
         public float WorldTimeSpeed { get; }
         public int WorldSize { get; }
         
+        public float WorldAbsorptionPower { get; }
+        public float PassiveAbsorptionPower { get; }
+        public float MotionAbsorptionPower { get; }
+        public float DeathEnergyThreshold { get; }
+        
         public TileBase GrassTile { get; }
         public TileBase DirtTile { get; }
         public Tile BlankTile { get; }

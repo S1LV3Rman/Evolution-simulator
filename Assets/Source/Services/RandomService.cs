@@ -20,5 +20,15 @@ namespace Source
         {
             return min + (max - min) * (float)_rng.NextDouble();
         }
+
+        public int Around(int mean, int delta)
+        {
+            return Range(mean - delta, mean + delta);
+        }
+
+        public float Around(float mean, float delta)
+        {
+            return Range(mean - delta, mean + delta);
+        }
     }
 }

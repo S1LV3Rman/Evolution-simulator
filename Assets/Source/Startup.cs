@@ -34,9 +34,14 @@ namespace Source
                     
                 .Add(new ClockController())
                 
+                //Life logic
+                .Add(new EnergyAbsorber())
+                
                 .Add(new LifeMotionPrediction())
                 
                 .Add(new LifeMotionRealization())
+                
+                .Add(new LifeMaintainer())
                 
                 //.Add(new TestSystem())
 

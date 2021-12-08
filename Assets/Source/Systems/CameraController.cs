@@ -22,7 +22,9 @@ namespace Source
         public void Init()
         {
             _camera = _scene.Camera;
+            _camera.orthographicSize = _config.CameraMaxSize;
             _targetSize = _camera.orthographicSize;
+
         }
 
         public void Run()

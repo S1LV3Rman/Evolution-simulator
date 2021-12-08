@@ -16,6 +16,7 @@ namespace Source
         {
             if (_movedLife.IsEmpty()) return;
 
+            var absorptionPower = _config.WorldAbsorptionPower * _config.MotionAbsorptionPower;
             var map = _worlds.Get1(0).Value;
             foreach (var i in _movedLife)
             {
@@ -27,15 +28,21 @@ namespace Source
                 var path = _movedLife.Get2(i).Path;
                 var changesEntity = _world.NewEntity();
                 changesEntity.Get<ChangedCells>().Value = path.ToArray();
-                
-                var endCoord = path.Last();
-                while (path.Count > 0)
-                {
-                    map[path[0]] = path.Count > 1 ? trailCell : lifeCell;
-                    path.RemoveAt(0);
-                }
 
-                lifeEntity.Get<Coord>().Value = endCoord;
+                ref var life = ref lifeEntity.Get<Life>();
+                var absorption = life.Form.Volume * absorptionPower;
+                var lastCoord = lifeEntity.Get<Coord>().Value;
+                while (path.Count > 0 && life.Energy > 0f)
+                {
+                    map[lastCoord] = trailCell;
+                    lastCoord = path.First();
+                    path.RemoveAt(0);
+
+                    life.Energy -= absorption;
+                }
+                map[lastCoord] = lifeCell;
+
+                lifeEntity.Get<Coord>().Value = lastCoord;
                 lifeEntity.Del<Moved>();
             }
         }
