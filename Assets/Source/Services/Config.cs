@@ -14,6 +14,7 @@ namespace Source
         [Space]
         [SerializeField] private float _worldTimeSpeed;
         [SerializeField] private int _worldSize;
+        [SerializeField] private float _worldGravitation;
         [Space]
         [SerializeField] private float _worldAbsorptionPower;
         [SerializeField] private float _passiveAbsorptionPower;
@@ -35,6 +36,8 @@ namespace Source
 
         public float WorldTimeSpeed => _worldTimeSpeed;
         public int WorldSize => _worldSize;
+
+        public float WorldGravitation => _worldGravitation;
 
         public float WorldAbsorptionPower => _worldAbsorptionPower;
 

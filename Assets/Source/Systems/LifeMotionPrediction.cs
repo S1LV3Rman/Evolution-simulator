@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Leopotam.Ecs;
+using UnityEngine;
 
 namespace Source
 {
@@ -18,6 +20,8 @@ namespace Source
             if (_ticks.IsEmpty()) return;
             if (_movableLife.IsEmpty()) return;
 
+            ref var worldMap = ref _worlds.Get1(0);
+            var friction = _config.WorldGravitation * .2f;
             var ticksCount = _ticks.Get1(0).Count;
             for (var t = 0; t < ticksCount; ++t)
             {
@@ -31,19 +35,24 @@ namespace Source
                     
                     if(!entity.Has<Moved>())
                         entity.Get<Moved>().Path = new List<MapCoord>();
-                    
-                    var distance = entity.Get<Motion>().Speed;
-                    var path = GetRandomPath(coord, distance);
+
+                    ref var motion = ref entity.Get<Motion>();
+                    var acceleration = motion.Acceleration.Clamp(-motion.Speed, motion.MaxSpeed - motion.Speed);
+                    var effort = Mathf.Abs(friction + acceleration);
+                    motion.EnergySpentPerMass += effort;
+                    motion.Speed += acceleration;
+                    var distance = motion.Speed;
+                    var path = GetRandomPath(ref worldMap, coord, distance);
                     entity.Get<Moved>().Path.AddRange(path);
                 }
             }
         }
 
-        private MapCoord[] GetRandomPath(MapCoord startCoord, int distance)
+        private MapCoord[] GetRandomPath(ref WorldMap worldMap, MapCoord startCoord, int distance)
         {
             var path = new List<MapCoord> { startCoord };
             
-            var map = _worlds.Get1(0).Value;
+            var map = worldMap.Value;
             var edge = _config.WorldSize;
 
             var lastStep = startCoord;

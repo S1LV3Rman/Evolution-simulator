@@ -27,7 +27,7 @@ namespace Source
             {
                 foreach (var i in _aliveLife)
                 {
-                    var energy = _aliveLife.Get1(i).Energy;
+                    var energy = _aliveLife.Get1(i).Energy / _aliveLife.Get1(i).Form.Volume;
                     if(energy <= 0)
                     {
                         Kill(ref _aliveLife.GetEntity(i));
@@ -50,7 +50,7 @@ namespace Source
             entity.Get<Alive>();
 
             var life = entity.Get<Life>();
-            var speed = entity.Has<Motion>() ? entity.Get<Motion>().Speed : 0;
+            var speed = entity.Has<Motion>() ? entity.Get<Motion>().MaxSpeed : 0;
             Debug.Log($"[{_globalTime.Get1(0).Value.TimeToString()}] "
                       + $"{life.Name} {speed}x{life.Form.Size} woke up with {life.Energy} energy");
         }
@@ -61,7 +61,7 @@ namespace Source
             entity.Get<Dead>();
 
             var life = entity.Get<Life>();
-            var speed = entity.Has<Motion>() ? entity.Get<Motion>().Speed : 0;
+            var speed = entity.Has<Motion>() ? entity.Get<Motion>().MaxSpeed : 0;
             Debug.Log($"[{_globalTime.Get1(0).Value.TimeToString()}] "
                       + $"{life.Name} {speed}x{life.Form.Size} died with {life.Energy} energy");
         }

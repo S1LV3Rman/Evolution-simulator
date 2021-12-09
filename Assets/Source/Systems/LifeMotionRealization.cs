@@ -30,7 +30,8 @@ namespace Source
                 changesEntity.Get<ChangedCells>().Value = path.ToArray();
 
                 ref var life = ref lifeEntity.Get<Life>();
-                var absorption = life.Form.Volume * absorptionPower;
+                ref var motion = ref lifeEntity.Get<Motion>();
+                var stepAbsorption = absorptionPower * motion.EnergySpentPerMass * life.Form.Volume / path.Count;
                 var lastCoord = lifeEntity.Get<Coord>().Value;
                 while (path.Count > 0 && life.Energy > 0f)
                 {
@@ -38,9 +39,10 @@ namespace Source
                     lastCoord = path.First();
                     path.RemoveAt(0);
 
-                    life.Energy -= absorption;
+                    life.Energy -= stepAbsorption;
                 }
                 map[lastCoord] = lifeCell;
+                motion.EnergySpentPerMass = 0;
 
                 lifeEntity.Get<Coord>().Value = lastCoord;
                 lifeEntity.Del<Moved>();

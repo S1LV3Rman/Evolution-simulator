@@ -15,11 +15,12 @@ namespace Source
             if (_aliveLife.IsEmpty()) return;
 
             var absorptionPower = _config.WorldAbsorptionPower * _config.PassiveAbsorptionPower;
+            var ticksCount = _ticks.Get1(0).Count;
             foreach (var i in _aliveLife)
             {
                 ref var life = ref _aliveLife.Get1(i);
 
-                var absorption = life.Form.Area * absorptionPower;
+                var absorption = life.Form.Area * absorptionPower * ticksCount;
                 life.Energy -= absorption;
             }
         }
