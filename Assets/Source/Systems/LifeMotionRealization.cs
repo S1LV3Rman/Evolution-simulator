@@ -10,14 +10,14 @@ namespace Source
         private readonly ISceneContext _scene = default;
 
         private readonly EcsFilter<Life, Moved> _movedLife = default;
-        private readonly EcsFilter<WorldMap> _worlds = default;
+        private readonly EcsFilter<SimulationMap> _maps = default;
         
         public void Run()
         {
             if (_movedLife.IsEmpty()) return;
 
             var absorptionPower = _config.WorldAbsorptionPower * _config.MotionAbsorptionPower;
-            var map = _worlds.Get1(0).Value;
+            var map = _maps.Get1(0).Value;
             foreach (var i in _movedLife)
             {
                 var lifeEntity = _movedLife.GetEntity(i);

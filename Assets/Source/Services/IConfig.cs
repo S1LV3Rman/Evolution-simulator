@@ -1,6 +1,4 @@
-﻿using UnityEngine.Tilemaps;
-
-namespace Source
+﻿namespace Source
 {
     public interface IConfig
     {
@@ -9,7 +7,7 @@ namespace Source
         public float CameraSizeScaler { get; }
         public float CameraResizeTime { get; }
         
-        public float WorldTimeSpeed { get; }
+        public float WorldStartSpeed { get; }
         public int WorldSize { get; }
         public float WorldGravitation { get; }
         
@@ -17,10 +15,6 @@ namespace Source
         public float PassiveAbsorptionPower { get; }
         public float MotionAbsorptionPower { get; }
         public float DeathEnergyThreshold { get; }
-        
-        public TileBase GrassTile { get; }
-        public TileBase DirtTile { get; }
-        public Tile BlankTile { get; }
         
         
         public int[] TestVariables { get; }

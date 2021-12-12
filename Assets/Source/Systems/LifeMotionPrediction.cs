@@ -13,14 +13,14 @@ namespace Source
 
         private readonly EcsFilter<Life, Motion, Alive> _movableLife = default;
         private readonly EcsFilter<Tick> _ticks = default;
-        private readonly EcsFilter<WorldMap> _worlds = default;
+        private readonly EcsFilter<SimulationMap> _maps = default;
         
         public void Run()
         {
             if (_ticks.IsEmpty()) return;
             if (_movableLife.IsEmpty()) return;
 
-            ref var worldMap = ref _worlds.Get1(0);
+            ref var worldMap = ref _maps.Get1(0);
             var friction = _config.WorldGravitation * .2f;
             var ticksCount = _ticks.Get1(0).Count;
             for (var t = 0; t < ticksCount; ++t)
@@ -48,11 +48,11 @@ namespace Source
             }
         }
 
-        private MapCoord[] GetRandomPath(ref WorldMap worldMap, MapCoord startCoord, int distance)
+        private MapCoord[] GetRandomPath(ref SimulationMap simulationMap, MapCoord startCoord, int distance)
         {
             var path = new List<MapCoord> { startCoord };
             
-            var map = worldMap.Value;
+            var map = simulationMap.Value;
             var edge = _config.WorldSize;
 
             var lastStep = startCoord;
@@ -91,7 +91,7 @@ namespace Source
 
             var activePaths = new Queue<List<MapCoord>>();
 
-            var map = _worlds.Get1(0).Value;
+            var map = _maps.Get1(0).Value;
             var edge = _config.WorldSize;
 
             var path = new List<MapCoord>();

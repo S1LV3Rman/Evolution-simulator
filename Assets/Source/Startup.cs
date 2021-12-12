@@ -9,6 +9,7 @@ namespace Source
         private EcsSystems _systems;
         
         [SerializeField] private Config _config;
+        [SerializeField] private DesignConfig _designConfig;
         
         private void Start()
         {
@@ -27,8 +28,8 @@ namespace Source
                 .Add(new WorldViewController())
                 
                 .Add(new WorldTime())
-                .Add(new TouchHandler())
-                .Add(new InputHandler())
+                
+                .Add(new InputSender())
                 
                 .Add(new CameraController())
                     
@@ -47,6 +48,7 @@ namespace Source
 
                 .Inject(GetComponent<ISceneContext>())
                 .Inject(_config)
+                .Inject(_designConfig)
                 .Inject(new RandomService())
                 
                 .Init();

@@ -5,8 +5,8 @@ namespace Source
 {
     public class WorldTime : IEcsInitSystem, IEcsRunSystem
     {
-        private readonly EcsWorld _world = default;
         private readonly IConfig _config = default;
+        private readonly EcsWorld _world = default;
 
         private readonly EcsFilter<Tick> _ticks = default;
         private readonly EcsFilter<SimulationTime> _globalTime = default;
@@ -16,7 +16,9 @@ namespace Source
         public void Init()
         {
             var entity = _world.NewEntity();
-            entity.Get<SimulationTime>().Value = new WorldDateTime();
+            ref var time = ref entity.Get<SimulationTime>();
+            time.Value = new WorldDateTime();
+            time.Speed = _config.WorldStartSpeed;
             
             _timePassed = 0f;
         }
@@ -27,8 +29,8 @@ namespace Source
 
             _ticks.Clear();
 
-            ref var dateTime = ref _globalTime.Get1(0).Value;
-            var secPerFrame = dateTime.timeFormat.RealSecPerSec / _config.WorldTimeSpeed;
+            ref var time = ref _globalTime.Get1(0);
+            var secPerFrame = time.Value.timeFormat.RealSecPerSec / time.Speed;
             if (_timePassed >= secPerFrame)
             {
                 var framesCount = Mathf.FloorToInt(_timePassed / secPerFrame);
@@ -37,7 +39,7 @@ namespace Source
                 var entity = _world.NewEntity();
                 entity.Get<Tick>().Count = framesCount;
                 
-                dateTime.AddSeconds(framesCount);
+                time.Value.AddSeconds(framesCount);
             }
         }
     }

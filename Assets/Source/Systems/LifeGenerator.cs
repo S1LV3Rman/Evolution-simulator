@@ -11,8 +11,9 @@ namespace Source
         private readonly IConfig _config = default;
         private readonly EcsWorld _world = default;
         private readonly IRandomService _random = default;
+        private readonly IDesignConfig _designConfig = default;
         
-        private readonly EcsFilter<WorldMap> _worlds = default;
+        private readonly EcsFilter<SimulationMap> _maps = default;
 
         private int lifeCount;
 
@@ -26,7 +27,7 @@ namespace Source
         {
             lifeCount++;
             
-            var map = _worlds.Get1(0).Value;
+            var map = _maps.Get1(0).Value;
             var freePlaces = map.Where(pair => pair.Value.Type == CellType.Empty).ToArray();
             var placeId = _random.Range(0, freePlaces.Length - 1);
             var coord = freePlaces.ElementAt(placeId).Key;
@@ -46,7 +47,7 @@ namespace Source
                 Form = form
             };
 
-            var tile = _config.BlankTile;
+            var tile = _designConfig.BlankTile;
             tile.color = lifeCount % 2 == 0 ? Color.red : Color.blue;
             // tile.color = new Color(
             //     _random.Range(0f, 1f),

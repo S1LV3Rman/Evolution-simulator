@@ -12,7 +12,7 @@ namespace Source
         [SerializeField] private float _cameraSizeScaler;
         [SerializeField] private float _cameraResizeTime;
         [Space]
-        [SerializeField] private float _worldTimeSpeed;
+        [SerializeField] private float _worldStartSpeed;
         [SerializeField] private int _worldSize;
         [SerializeField] private float _worldGravitation;
         [Space]
@@ -20,10 +20,6 @@ namespace Source
         [SerializeField] private float _passiveAbsorptionPower;
         [SerializeField] private float _motionAbsorptionPower;
         [SerializeField] private float _deathEnergyThreshold;
-        [Space]
-        [SerializeField] private TileBase _grassTile;
-        [SerializeField] private TileBase _dirtTile;
-        [SerializeField] private Tile _blankTile;
         [Space]
         [SerializeField] private int[] _testVariables;
 
@@ -34,7 +30,7 @@ namespace Source
 
         public float CameraResizeTime => _cameraResizeTime;
 
-        public float WorldTimeSpeed => _worldTimeSpeed;
+        public float WorldStartSpeed => _worldStartSpeed;
         public int WorldSize => _worldSize;
 
         public float WorldGravitation => _worldGravitation;
@@ -46,11 +42,6 @@ namespace Source
         public float MotionAbsorptionPower => _motionAbsorptionPower;
 
         public float DeathEnergyThreshold => _deathEnergyThreshold;
-
-        public TileBase GrassTile => _grassTile;
-        public TileBase DirtTile => _dirtTile;
-        public Tile BlankTile => _blankTile.Clone();
-
 
         public int[] TestVariables => _testVariables;
     }

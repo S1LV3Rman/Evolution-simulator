@@ -2,7 +2,7 @@
 
 namespace Source
 {
-    public struct WorldMap
+    public struct SimulationMap
     {
         public Dictionary<MapCoord, Cell> Value;
     }

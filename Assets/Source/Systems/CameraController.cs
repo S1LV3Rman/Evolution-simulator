@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using Lean.Touch;
 using Leopotam.Ecs;
 using UnityEngine;
 
@@ -12,8 +13,6 @@ namespace Source
         private readonly EcsFilter<Finger, Update> _updateFingers;
         private readonly EcsFilter<Mouse, Wheel> _mouseWheels;
         
-        private Camera _camera;
-
         private float _targetSize;
         private Tweener _resizeTweener;
         private Tweener _translateTweener;
@@ -21,10 +20,8 @@ namespace Source
 
         public void Init()
         {
-            _camera = _scene.Camera;
-            _camera.orthographicSize = _config.CameraMaxSize;
-            _targetSize = _camera.orthographicSize;
-
+            _scene.Camera.orthographicSize = _config.CameraMaxSize;
+            _targetSize = _scene.Camera.orthographicSize;
         }
 
         public void Run()
@@ -33,15 +30,14 @@ namespace Source
                 foreach (var i in _updateFingers)
                 {
                     var finger = _updateFingers.Get1(i).Value;
-                    if(finger.StartedOverGui) continue;
+                    if(finger.StartedOverGui || finger.Index == LeanTouch.MOUSE_FINGER_INDEX) continue;
 
                     _resizeTweener?.Kill();
                     _translateTweener?.Kill();
-                    _targetSize = _camera.orthographicSize;
-                    _camera.transform.Translate(-finger.GetWorldDelta(0f));
+                    _targetSize = _scene.Camera.orthographicSize;
+                    _scene.Camera.transform.Translate(-finger.GetWorldDelta(0f));
                 }
-            
-            if (!_mouseWheels.IsEmpty())
+            else if (!_mouseWheels.IsEmpty())
                 foreach (var i in _mouseWheels)
                 {
                     var mouse = _mouseWheels.Get1(0).finger;
@@ -54,16 +50,16 @@ namespace Source
                     {
                         _targetSize = targetSize;
                         _resizeTweener?.Kill();
-                        _resizeTweener = _camera.DOOrthoSize(_targetSize, _config.CameraResizeTime);
+                        _resizeTweener = _scene.Camera.DOOrthoSize(_targetSize, _config.CameraResizeTime);
                     }
 
                     var mousePos = mouse.GetWorldPosition(0f);
-                    var cameraPos = _camera.transform.position;
-                    var sizeMultiplier = _targetSize / _camera.orthographicSize - 1f;
+                    var cameraPos = _scene.Camera.transform.position;
+                    var sizeMultiplier = _targetSize / _scene.Camera.orthographicSize - 1f;
                     var translate = (cameraPos - mousePos) * sizeMultiplier;
                     var targetPos = cameraPos + translate;
                     _translateTweener?.Kill();
-                    _translateTweener = _camera.transform.DOMove(targetPos, 
+                    _translateTweener = _scene.Camera.transform.DOMove(targetPos, 
                         _config.CameraResizeTime - _resizeTweener.Elapsed());
                 }
         }

@@ -11,16 +11,17 @@ namespace Source
     {
         private readonly EcsWorld _world = default;
         private readonly IConfig _config = default;
+        private readonly IDesignConfig _designConfig = default;
 
         public void Init()
         {
             var groundPoints = CreateLayer(0);
             var landPoints = CreateLayer(1);
             
-            var worldEntity = _world.NewEntity();
-            ref var map = ref worldEntity.Get<WorldMap>().Value;
+            var mapEntity = _world.NewEntity();
+            var map = mapEntity.Get<SimulationMap>().Value;
             map = groundPoints.ToDictionary(point => point,
-                point => new Cell(CellType.Grass, _config.GrassTile));
+                point => new Cell(CellType.Grass, _designConfig.GrassTile));
             foreach (var point in landPoints)
                 map.Add(point, new Cell());
             
