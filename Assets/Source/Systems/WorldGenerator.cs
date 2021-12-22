@@ -18,12 +18,13 @@ namespace Source
             var groundPoints = CreateLayer(0);
             var landPoints = CreateLayer(1);
             
-            var mapEntity = _world.NewEntity();
-            var map = mapEntity.Get<SimulationMap>().Value;
-            map = groundPoints.ToDictionary(point => point,
+            var map = groundPoints.ToDictionary(point => point,
                 point => new Cell(CellType.Grass, _designConfig.GrassTile));
             foreach (var point in landPoints)
                 map.Add(point, new Cell());
+            
+            var mapEntity = _world.NewEntity();
+            mapEntity.Get<SimulationMap>().Value = map;
             
             var changesEntity = _world.NewEntity();
             ref var changedCells = ref changesEntity.Get<ChangedCells>().Value;

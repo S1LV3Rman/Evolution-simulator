@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fdfefbef39242aba7d16de63fa4310c, type: 3}
   m_Name: DesignConfig
   m_EditorClassIdentifier: 
-  _playSprite: {fileID: 0}
-  _pauseSprite: {fileID: 0}
-  _grassTile: {fileID: 0}
-  _dirtTile: {fileID: 0}
-  _blankTile: {fileID: 0}
+  _grassTile: {fileID: 11400000, guid: ae14badd7c360c542b11ddec2739e8fd, type: 2}
+  _dirtTile: {fileID: 11400000, guid: 5888abb116ec7b6498336eb1e13ac4f9, type: 2}
+  _blankTile: {fileID: 11400000, guid: 0e70ad5a09b0e2d4dab717c012c20bfe, type: 2}

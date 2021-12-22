@@ -25,15 +25,16 @@ namespace Source
                 .Add(new WorldGenerator())
                 .Add(new LifeGenerator())
                 
+                .Add(new InputSender())
+                .Add(new ButtonsSender())
+                
                 .Add(new WorldViewController())
                 
                 .Add(new WorldTime())
                 
-                .Add(new InputSender())
-                
                 .Add(new CameraController())
-                    
                 .Add(new ClockController())
+                .Add(new SimulationPlayerController())
                 
                 //Life logic
                 .Add(new EnergyAbsorber())

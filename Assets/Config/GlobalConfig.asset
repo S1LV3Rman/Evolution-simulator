@@ -16,14 +16,11 @@ MonoBehaviour:
   _cameraMaxSize: 55
   _cameraSizeScaler: 0.15
   _cameraResizeTime: 0.25
-  _worldTimeSpeed: 120
+  _worldStartSpeed: 60
   _worldSize: 50
   _worldGravitation: 10
   _worldAbsorptionPower: 1
   _passiveAbsorptionPower: 0.025
   _motionAbsorptionPower: 0.01
   _deathEnergyThreshold: 10
-  _grassTile: {fileID: 11400000, guid: ae14badd7c360c542b11ddec2739e8fd, type: 2}
-  _dirtTile: {fileID: 11400000, guid: 5888abb116ec7b6498336eb1e13ac4f9, type: 2}
-  _blankTile: {fileID: 11400000, guid: 0e70ad5a09b0e2d4dab717c012c20bfe, type: 2}
   _testVariables: 0a0000000a000000e8030000

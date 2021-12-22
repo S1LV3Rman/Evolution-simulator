@@ -328,6 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _config: {fileID: 11400000, guid: eb2f60bbed9fdf94786328a2ad7cfbab, type: 2}
+  _designConfig: {fileID: 11400000, guid: fc4a0102f79c5ba4c8c852aa0486d13b, type: 2}
 --- !u!4 &405049798
 Transform:
   m_ObjectHideFlags: 0
