@@ -17,7 +17,6 @@ namespace Source
         public void Init()
         {
             _onFingerUpdate = new MultiTriggerSubscriber<LeanFinger>(FingerUpdateHandler);
-            
             LeanTouch.OnFingerUpdate += _onFingerUpdate.Trigger;
         }
         

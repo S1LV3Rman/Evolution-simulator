@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.Events;
 
 namespace Source
 {
-    public sealed class MultiTriggerSubscriber
+    public sealed class MultiTriggerSubscriber : ITriggerSubscriber
     {
         private int _triggersCount;
         private Action _action;
+        private UnityEvent _triggerEvent;
 
         public void Trigger()
         {
@@ -25,15 +27,35 @@ namespace Source
 
         public MultiTriggerSubscriber(Action action)
         {
+            _triggerEvent = null;
             _action = action;
             _triggersCount = 0;
+            
+            TriggerSubscribersPool.List.Add(this);
+        }
+
+        public MultiTriggerSubscriber(UnityEvent triggerEvent, Action action)
+        {
+            _triggerEvent = triggerEvent;
+            _action = action;
+            _triggersCount = 0;
+                
+            triggerEvent.AddListener(Trigger);
+            
+            TriggerSubscribersPool.List.Add(this);
+        }
+
+        public void Dispose()
+        {
+            _triggerEvent?.RemoveListener(Trigger);
         }
     }
     
-    public sealed class MultiTriggerSubscriber<T>
+    public sealed class MultiTriggerSubscriber<T> : ITriggerSubscriber
     {
         private List<T> _values;
         private Action<T> _action;
+        private UnityEvent<T> _triggerEvent;
 
         public void Trigger(T value)
         {
@@ -51,8 +73,27 @@ namespace Source
 
         public MultiTriggerSubscriber(Action<T> action)
         {
+            _triggerEvent = null;
             _action = action;
             _values = new List<T>();
+            
+            TriggerSubscribersPool.List.Add(this);
+        }
+
+        public MultiTriggerSubscriber(UnityEvent<T> triggerEvent, Action<T> action)
+        {
+            _triggerEvent = triggerEvent;
+            _action = action;
+            _values = new List<T>();
+                
+            triggerEvent.AddListener(Trigger);
+            
+            TriggerSubscribersPool.List.Add(this);
+        }
+
+        public void Dispose()
+        {
+            _triggerEvent?.RemoveListener(Trigger);
         }
     }
 }

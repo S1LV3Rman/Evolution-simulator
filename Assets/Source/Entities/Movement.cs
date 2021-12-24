@@ -1,6 +1,6 @@
 ﻿namespace Source
 {
-    public struct Motion : IModule
+    public struct Movement : IModule
     {
         public float Weight { get; set; }
         public int MaxSpeed  { get; set; }

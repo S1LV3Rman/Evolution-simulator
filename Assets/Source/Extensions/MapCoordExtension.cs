@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Source
 {
@@ -57,6 +59,22 @@ namespace Source
         {
             foreach (var coord in coords)
                 coord.InvertOverEdge(edge);
+        }
+
+        public static List<MapCoord> GetFreeNeighborCoords(this Dictionary<MapCoord, Cell> map, MapCoord center, int edge)
+        {
+            var possibleSteps = new List<MapCoord>();
+            for (var d = Direction.TopRight; d <= Direction.TopLeft; ++d)
+            {
+                var coord = center.GetNeighbourCoord(d);
+                coord.InvertOverEdge(edge);
+
+                if (map[coord].Type == CellType.Empty ||
+                    map[coord].Type == CellType.Trail)
+                    possibleSteps.Add(coord);
+            }
+
+            return possibleSteps;
         }
     }
 }

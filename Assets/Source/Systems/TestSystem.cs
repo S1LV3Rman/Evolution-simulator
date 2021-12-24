@@ -11,7 +11,7 @@ namespace Source
         private readonly ISceneContext _scene = default;
         private readonly IRandomService _random = default;
 
-        private readonly EcsFilter<Life, Motion, Alive> _movableLife = default;
+        private readonly EcsFilter<Life, Movement, Alive> _movableLife = default;
         private readonly EcsFilter<Tick> _ticks = default;
 
         public void Init()

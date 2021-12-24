@@ -27,6 +27,7 @@ namespace Source
                 
                 .Add(new InputSender())
                 .Add(new ButtonsSender())
+                .Add(new SubscribersMaintainer())
                 
                 .Add(new WorldViewController())
                 

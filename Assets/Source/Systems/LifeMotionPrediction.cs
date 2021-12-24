@@ -11,7 +11,7 @@ namespace Source
         private readonly IConfig _config = default;
         private readonly IRandomService _random = default;
 
-        private readonly EcsFilter<Life, Motion, Alive> _movableLife = default;
+        private readonly EcsFilter<Life, Movement, Alive> _movableLife = default;
         private readonly EcsFilter<Tick> _ticks = default;
         private readonly EcsFilter<SimulationMap> _maps = default;
         
@@ -36,12 +36,12 @@ namespace Source
                     if(!entity.Has<Moved>())
                         entity.Get<Moved>().Path = new List<MapCoord>();
 
-                    ref var motion = ref entity.Get<Motion>();
-                    var acceleration = motion.Acceleration.Clamp(-motion.Speed, motion.MaxSpeed - motion.Speed);
+                    ref var movement = ref entity.Get<Movement>();
+                    var acceleration = movement.Acceleration.Clamp(-movement.Speed, movement.MaxSpeed - movement.Speed);
                     var effort = Mathf.Abs(friction + acceleration);
-                    motion.EnergySpentPerMass += effort;
-                    motion.Speed += acceleration;
-                    var distance = motion.Speed;
+                    movement.EnergySpentPerMass += effort;
+                    movement.Speed += acceleration;
+                    var distance = movement.Speed;
                     var path = GetRandomPath(ref worldMap, coord, distance);
                     entity.Get<Moved>().Path.AddRange(path);
                 }
@@ -58,16 +58,9 @@ namespace Source
             var lastStep = startCoord;
             for (var i = 0; i < distance; ++i)
             {
-                var possibleSteps = new List<MapCoord>();
-                for (var d = Direction.TopRight; d <= Direction.TopLeft; ++d)
-                {
-                    var coord = lastStep.GetNeighbourCoord(d);
-                    coord.InvertOverEdge(edge);
-
-                    if (map[coord].Type == CellType.Empty ||
-                        map[coord].Type == CellType.Trail)
-                        possibleSteps.Add(coord);
-                }
+                var possibleSteps = map.GetFreeNeighborCoords(lastStep, edge);
+                if (possibleSteps.Count <= 0) break;
+                
                 var stepId = _random.Range(0, possibleSteps.Count - 1);
                 path.Add(possibleSteps[stepId]);
                 lastStep = path.Last();

@@ -3,47 +3,26 @@ using Leopotam.Ecs;
 
 namespace Source
 {
-    public class ButtonsSender : IEcsInitSystem, IEcsRunSystem, IEcsDestroySystem
+    public class ButtonsSender : IEcsInitSystem, IEcsRunSystem
     {
         private readonly EcsWorld _world = default;
         private readonly SceneContext _scene = default;
 
         private readonly EcsFilter<UIEvent> _uiEvents;
 
-        private SingleTriggerSubscriber _onPlayButton;
-        private SingleTriggerSubscriber _onPauseButton;
-        private MultiTriggerSubscriber _onSpeedUpButton;
-        private MultiTriggerSubscriber _onSpeedDownButton;
-        private SingleTriggerSubscriber<string> _onSpeedField;
-
 
         public void Init()
         {
-            _onPlayButton = new SingleTriggerSubscriber(CreateUIEvent<PlayButton>);
-            _scene.Canvas.SimulationPlayer.PlayButton.OnClick().AddListener(_onPlayButton.Trigger);
-            
-            _onPauseButton = new SingleTriggerSubscriber(CreateUIEvent<PauseButton>);
-            _scene.Canvas.SimulationPlayer.PauseButton.OnClick().AddListener(_onPauseButton.Trigger);
-            
-            _onSpeedUpButton = new MultiTriggerSubscriber(CreateUIEvent<SpeedUpButton>);
-            _scene.Canvas.SimulationPlayer.SpeedUpButton.OnClick().AddListener(_onSpeedUpButton.Trigger);
-            
-            _onSpeedDownButton = new MultiTriggerSubscriber(CreateUIEvent<SpeedDownButton>);
-            _scene.Canvas.SimulationPlayer.SpeedDownButton.OnClick().AddListener(_onSpeedDownButton.Trigger);
-            
-            _onSpeedField = new SingleTriggerSubscriber<string>(CreateSpeedChangeEvent);
-            _scene.Canvas.SimulationPlayer.SpeedField.onEndEdit.AddListener(_onSpeedField.Trigger);
+            new SingleTriggerSubscriber(_scene.Canvas.SimulationPlayer.PlayButton.OnClick(), CreateUIEvent<PlayButton>);
+            new SingleTriggerSubscriber(_scene.Canvas.SimulationPlayer.PauseButton.OnClick(), CreateUIEvent<PauseButton>);
+            new MultiTriggerSubscriber(_scene.Canvas.SimulationPlayer.SpeedUpButton.OnClick(), CreateUIEvent<SpeedUpButton>);
+            new MultiTriggerSubscriber(_scene.Canvas.SimulationPlayer.SpeedDownButton.OnClick(), CreateUIEvent<SpeedDownButton>);
+            new SingleTriggerSubscriber<string>(_scene.Canvas.SimulationPlayer.SpeedField.onEndEdit, CreateSpeedChangeEvent);
         }
         
         public void Run()
         {
             _uiEvents.Clear();
-            
-            _onPlayButton.TryProcess();
-            _onPauseButton.TryProcess();
-            _onSpeedUpButton.TryProcess();
-            _onSpeedDownButton.TryProcess();
-            _onSpeedField.TryProcess();
         }
 
         private void CreateUIEvent<T>() where T: struct 
@@ -61,15 +40,6 @@ namespace Source
                 entity.Get<UIEvent>();
                 entity.Get<SpeedField>().Value = speedValue;
             }
-        }
-
-        public void Destroy()
-        {
-            _scene.Canvas.SimulationPlayer.PlayButton.OnClick().RemoveListener(_onPlayButton.Trigger);
-            _scene.Canvas.SimulationPlayer.PauseButton.OnClick().RemoveListener(_onPauseButton.Trigger);
-            _scene.Canvas.SimulationPlayer.SpeedUpButton.OnClick().RemoveListener(_onSpeedUpButton.Trigger);
-            _scene.Canvas.SimulationPlayer.SpeedDownButton.OnClick().RemoveListener(_onSpeedDownButton.Trigger);
-            _scene.Canvas.SimulationPlayer.SpeedField.onEndEdit.RemoveListener(_onSpeedField.Trigger);
         }
     }
 }

@@ -37,13 +37,13 @@ namespace Source
             
             var form = CubeForm.FromVolume(_random.Around(10f, 2f));
             //var power = _random.Around(_config.TestVariables[2], _config.TestVariables[3]) * form.Volume;
-            var power = _config.TestVariables[2] * form.Volume;
+            var energy = _config.TestVariables[2] * form.Volume;
             
             var life = new Life
             {
                 Name = lifeCount % 2 == 0 ? "Red Cell" : "Blue Cell",
                 Parent = "Creator",
-                Energy = power, 
+                Energy = energy, 
                 Form = form
             };
 
@@ -54,7 +54,7 @@ namespace Source
             //     _random.Range(0f, 1f),
             //     _random.Range(0f, 1f));
 
-            var motion = new Motion
+            var movement = new Movement
             {
                 Weight = 1,
                 MaxSpeed = maxSpeed,
@@ -63,11 +63,20 @@ namespace Source
                 EnergySpentPerMass = 0
             };
 
+            var replication = new Replication
+            {
+                Weight = 1,
+                EnergyCost = energy / 4f,
+                IncubationTime = 3600f,
+                Amount = 1,
+            };
+
             var lifeEntity = _world.NewEntity();
             lifeEntity.Get<Life>() = life;
             lifeEntity.Get<Coord>().Value = coord;
             lifeEntity.Get<LifeTile>().SetTile(tile);
-            if (maxSpeed > 0) lifeEntity.Get<Motion>() = motion;
+            if (maxSpeed > 0) lifeEntity.Get<Movement>() = movement;
+            lifeEntity.Get<Replication>() = replication;
             lifeEntity.Get<Awake>();
             
             map[coord] = new Cell(CellType.Life, tile);
